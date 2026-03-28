@@ -1,0 +1,140 @@
+'use client'
+
+import { useState } from 'react'
+import { Fragment } from 'react'
+
+const Lifecycle = () => {
+  const [activeStage, setActiveStage] = useState(null)
+  const [hoveredStage, setHoveredStage] = useState(null)
+
+  const stages = [
+    {
+      id: 1,
+      name: 'Initiation',
+      image: '/assets/initiation.png',
+      description: 'Feasibility  &  concept  phase  planning',
+      outputs: ['Project requirements', 'Stakeholder analysis', 'Initial scope definition']
+    },
+    {
+      id: 2,
+      name: 'Pre-construction Planning',
+      image: '/assets/Preconstruction.png',
+      description: 'Detailed planning and resource allocation',
+      outputs: ['Project schedule', 'Resource planning', 'Budget estimation', 'Risk assessment']
+    },
+    {
+      id: 3,
+      name: 'Designing Development',
+      image: '/assets/design development.png',
+      description: 'Architectural and engineering design development',
+      outputs: ['Design documents', 'Engineering specifications', 'Material selection', 'Compliance checks']
+    },
+    {
+      id: 4,
+      name: 'Execution & Monitoring',
+      image: '/assets/execution.png',
+      description: 'Construction execution and progress monitoring',
+      outputs: ['Construction progress', 'Quality control', 'Timeline tracking', 'Budget management']
+    },
+    {
+      id: 5,
+      name: 'Handover',
+      image: '/assets/handover.png',
+      description: 'Project completion and client handover',
+      outputs: ['Final inspection', 'Documentation', 'Training', 'Project closure']
+    }
+  ]
+
+  const handleStageClick = (stageId) => {
+    console.log('Clicked stage:', stageId, 'Current active:', activeStage);
+    setActiveStage(activeStage === stageId ? null : stageId);
+  }
+
+  const handleStageHover = (stageId) => {
+    setHoveredStage(stageId);
+  }
+
+  const handleStageLeave = () => {
+    setHoveredStage(null);
+  }
+
+  const shouldShowDescription = (stageId) => {
+    const shouldShow = activeStage === stageId || hoveredStage === stageId;
+    console.log('Should show description for stage', stageId, ':', shouldShow, 'Active stage:', activeStage, 'Hovered stage:', hoveredStage);
+    return shouldShow;
+  }
+
+  return (
+    <section className="lifecycle-section">
+      <div className="container">
+        <div className="lifecycle-header">
+          <h2 className="lifecycle-title">End-to-End Construction Lifecycle Framework</h2>
+          <p className="lifecycle-subtitle">
+            Comprehensive project management from concept to completion
+          </p>
+        </div>
+
+        <div className="lifecycle-stages">
+          <Fragment key="stages-container">
+          <div className="stages-container">
+            {stages.map((stage, index) => (
+              <div key={stage.id} className="stage-wrapper">
+                <div className="stage-content">
+                  <button
+                    className={`stage-circle ${activeStage === stage.id ? 'active' : ''}`}
+                    onClick={() => handleStageClick(stage.id)}
+                    onMouseEnter={() => handleStageHover(stage.id)}
+                    onMouseLeave={handleStageLeave}
+                  >
+                    <img src={stage.image} alt={stage.name} className="stage-image" />
+                  </button>
+                  <div className="stage-name">{stage.id}. {stage.name}</div>
+                  
+                  {/* Description Box - Positioned below each circle */}
+                  {shouldShowDescription(stage.id) && (
+                    <div key={`description-${stage.id}`} className={`lifecycle-description ${shouldShowDescription(stage.id) ? 'show' : ''}`}>
+                      <div className="description-arrow"></div>
+                      <div className="description-content">
+                        <div className="description-header">
+                          <h3 className="description-title">
+                            Stage {stage.id}: {stage.name}
+                          </h3>
+                        </div>
+                        <div className="description-body">
+                          <div className="description-text">
+                            <p>{stage.description}</p>
+                          </div>
+                          <div className="description-outputs">
+                            <h4 className="outputs-title">Output:</h4>
+                            <ul className="outputs-list">
+                              {stage.outputs.map((output, index) => (
+                                <li key={index} className="output-item">
+                                  <span className="output-bullet">✓</span>
+                                  {output}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Fragment>
+        </div>
+
+        {/* CTA Button */}
+        <div key="lifecycle-cta" className="lifecycle-cta">
+          <button className="lifecycle-button">
+            <span>Got a challenge or idea? Let's talk →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Lifecycle
