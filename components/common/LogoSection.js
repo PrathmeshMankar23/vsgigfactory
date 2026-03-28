@@ -12,7 +12,7 @@ const LogoSection = () => {
     { name: 'Schneider', image: '/assets/schneider.png' },
     { name: 'Mastercard', image: '/assets/mastercard.png' },
     { name: 'denkall', image: '/assets/denkall.png' },
-    { name: 'Mudon', image: '/assets/mudon.png' },
+    { name: 'Mudon', image: '/assets/mudon.jpg' },
   ]
 
   return (

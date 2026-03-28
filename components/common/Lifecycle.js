@@ -13,7 +13,7 @@ const Lifecycle = () => {
       name: 'Initiation',
       image: '/assets/initiation.png',
       description: 'Feasibility  &  concept  phase  planning',
-      outputs: ['Project requirements', 'Stakeholder analysis', 'Initial scope definition']
+      outputs: ['Project requirements', 'Stakeholder analysis', 'Initial scope definition', 'initial stage', 'project']
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const Lifecycle = () => {
       name: 'Handover',
       image: '/assets/handover.png',
       description: 'Project completion and client handover',
-      outputs: ['Final inspection', 'Documentation', 'Training', 'Project closure']
+      outputs: ['Final inspection', 'Documentation', 'Training', 'Project closure', 'final stage']
     }
   ]
 

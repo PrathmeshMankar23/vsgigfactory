@@ -79,8 +79,8 @@ const Services = () => {
 
         {/* CTA Button */}
         <div className="services-cta">
-          <button className="services-button">
-            Explore All Services →
+          <button className="services-cta-button">
+            <span>Have a project in mind? Let's talk →</span>
           </button>
         </div>
       </div>

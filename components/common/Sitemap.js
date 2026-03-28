@@ -82,23 +82,23 @@ const Sitemap = () => {
             <span className="logo-gig">Gig</span>
             <span className="logo-factory">factory</span>
             <div className="flags-container">
-              <svg className="flag" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                <rect width="24" height="16" fill="#FF9933" />
-                <path d="M12 0L0 8h12v8H0V0z" fill="#138808" />
-                <path d="M12 0l12 8h12V0H12z" fill="#FFFFFF" />
-                <circle cx="6" cy="8" r="2" fill="#FF9933" />
-                <circle cx="18" cy="8" r="2" fill="#FFFFFF" />
-                <path d="M6 7v2h2V7H6zm10 0v2h2V7h-2z" fill="#FF9933" />
+              {/* India Flag */}
+              <svg className="flag" viewBox="0 0 24 16" fill="none">
+                <rect width="24" height="16" fill="#FF9933"/>
+                <rect y="5.33" width="24" height="5.33" fill="white"/>
+                <rect y="10.67" width="24" height="5.33" fill="#138808"/>
+                <circle cx="12" cy="8" r="2" fill="#000080"/>
               </svg>
-              <svg className="flag" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                <rect width="24" height="16" fill="#012169" />
-                <path d="M0 0l24 8v8L0 0z" fill="#FFFFFF" />
-                <path d="M0 0l12 8v8L0 0z" fill="#C8102E" />
-                <path d="M12 0l12 8v8L12 0z" fill="#012169" />
+              {/* UK Flag */}
+              <svg className="flag" viewBox="0 0 24 16" fill="none">
+                <rect width="24" height="16" fill="#012169"/>
+                <path d="M0 0L24 16M24 0L0 16" stroke="white" strokeWidth="2.67"/>
+                <path d="M0 0L24 16M24 0L0 16" stroke="#C8102E" strokeWidth="1.33"/>
+                <path d="M12 0V16M0 8H24" stroke="white" strokeWidth="4"/>
+                <path d="M12 0V16M0 8H24" stroke="#C8102E" strokeWidth="2.67"/>
               </svg>
             </div>
           </div>
-          <div className="logo-tagline">TECHNOLOGY ENABLED PLATFORM</div>
         </div>
 
         {/* Sitemap Links */}
