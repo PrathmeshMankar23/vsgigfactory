@@ -1788,7 +1788,42 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Apply to all CTA buttons */
+/* Hero Button Specific - White Background */
+.hero-button {
+  background: #ffffff !important;
+  color: #16a34a !important;
+  border: 2px solid #16a34a !important;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 280px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.hero-button span {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  color: #16a34a !important;
+}
+
+.hero-button:hover span {
+  color: #16a34a !important;
+}
+
+/* Apply to all CTA buttons - White Background Style */
 .hero-button,
 .services-cta-button,
 .case-studies-button,
@@ -1799,16 +1834,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px 32px;
-  border: 2px solid #000000;
+  border: 2px solid #16a34a;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: #ffffff;
+  background: #ffffff !important;
   min-width: 280px;
-  color: #000000;
+  color: #16a34a !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1835,9 +1870,10 @@ body {
 .advantages-button:hover,
 .lifecycle-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background: #16a34a;
-  border-color: #16a34a;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  background: #16a34a !important;
+  border-color: #16a34a !important;
+  color: #ffffff !important;
 }
 
 .hero-button:hover span,
@@ -1845,10 +1881,7 @@ body {
 .case-studies-button:hover span,
 .advantages-button:hover span,
 .lifecycle-button:hover span {
-  background: #ffffff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff !important;
 }
 
 /* CTA Container Styling */
@@ -2318,20 +2351,24 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px 32px;
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  color: #ffffff;
-  border: none;
+  background: #ffffff !important;
+  color: #16a34a !important;
+  border: 2px solid #16a34a !important;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .advantages-button:hover {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(22, 163, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
 }
 
 /* Responsive Design */
@@ -2414,16 +2451,17 @@ body {
 }
 
 .lifecycle-button {
-  background-color: #16a34a;
-  color: #000000;
+  background: transparent;
+  color: #16a34a;
+  border: 2px solid #16a34a;
   padding: 16px 32px;
-  border: none;
   border-radius: 8px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .lifecycle-button:hover {
@@ -3037,22 +3075,23 @@ body {
 }
 
 .advantages-button {
-  background-color: #16a34a;
-  color: #000000;
+  background: transparent;
+  color: #16a34a;
   padding: 18px 36px;
-  border: none;
+  border: 2px solid #16a34a;
   border-radius: 8px;
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .advantages-button:hover {
-  background-color: #16a34a;
+  background: #16a34a;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(22, 163, 74, 0.3);
 }
 
 
@@ -3375,23 +3414,25 @@ body {
 }
 
 .case-studies-button {
-  background-color: #86efac; /* Light green */
-  color: #000000;
+  background: #ffffff !important;
+  color: #16a34a !important;
+  border: 2px solid #16a34a !important;
   padding: 16px 32px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .case-studies-button:hover {
-  background-color: #4ade80; /* Darker green on hover */
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
 }
 
 /* Responsive Design for Case Studies Section */

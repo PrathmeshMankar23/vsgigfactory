@@ -130,7 +130,7 @@ const Advantages = () => {
         {/* CTA Button */}
         <div className="advantages-cta">
           <button className="advantages-button">
-            Looking for smart construction solutions? Let's talk →
+            <span>Looking for smart construction solutions? Let's talk →</span>
           </button>
         </div>
       </div>
