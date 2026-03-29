@@ -1664,52 +1664,78 @@ body {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 150px 50px;
-  margin-top: 50px;
-  width: 100%;
+  gap: 40px;
+  margin: 0 auto;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 
 .service-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.05),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(229, 231, 235, 0.8);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: auto;
-  min-height: 200px;
-  margin-bottom: 0;
+  height: 100%;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-color: #16a34a; /* Green border on hover */
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px -10px rgba(22, 163, 74, 0.15),
+    0 0 0 2px rgba(22, 163, 74, 0.1);
+  border-color: #16a34a;
+}
+
+.service-card:hover::after {
+  opacity: 1;
 }
 
 .service-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  background: #ffffff; /* Revert to white background since icons have white backgrounds */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 24px auto;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   position: relative;
-  overflow: hidden;
-  margin: 0 auto 16px auto; /* Center horizontally */
-  border: 2px solid #000000;
+  transition: all 0.4s ease;
+  z-index: 1;
+  overflow: hidden; /* Ensure image background doesn't bleed out of rounded corners */
+}
+
+.service-card:hover .service-icon {
+  background: #16a34a;
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 15px 30px rgba(22, 163, 74, 0.25);
 }
 
 .service-icon.stage-image {
@@ -1724,12 +1750,41 @@ body {
 }
 
 .service-icon-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  display: block; /* Ensure proper centering */
+  transition: all 0.4s ease;
+  display: block;
+}
+
+.service-card:hover .service-icon-image {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1); /* This might still turn it all white if used on white background image */
+  /* If the image has white background, let's just use it as is or darkened */
+}
+
+/* Specific fix for white-background icons on green hover */
+.service-card:hover .service-icon .service-icon-image {
+  mix-blend-mode: multiply; /* This will make the white part of the image transparent on the green background */
+}
+
+.service-card .service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: #16a34a;
+}
+
+.service-card .service-description {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .service-icon:hover .service-icon-image {
@@ -2371,6 +2426,212 @@ body {
   box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
 }
 
+/* Advantage Modal Styles */
+.advantage-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.advantage-modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 24px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden; /* Prevent content overflow on main container */
+  animation: modalAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-scroll-container {
+  overflow-y: auto;
+  max-height: 90vh;
+  padding: 20px 0;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.modal-section {
+  scroll-margin-top: 20px;
+}
+
+.modal-section-divider {
+  height: 2px;
+  background: #f1f5f9;
+  margin: 60px 48px;
+}
+
+.modal-section:last-child .modal-section-divider {
+  display: none;
+}
+
+@keyframes modalAppear {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.close-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: #64748b;
+  cursor: pointer;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.modal-header {
+  padding: 48px 48px 24px;
+}
+
+.modal-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f97316; /* Vibrant Orange/Red */
+  margin: 0;
+  line-height: 1;
+}
+
+.modal-accent {
+  width: 80px;
+  height: 6px;
+  background: #4ade80; /* Light green accent */
+  margin-top: 16px;
+  border-radius: 3px;
+}
+
+.modal-body {
+  padding: 0 48px 48px;
+}
+
+.modal-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.modal-description {
+  font-size: 1.25rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.modal-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.modal-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 1.25rem;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.modal-point .bullet {
+  color: #334155;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.modal-footer-text {
+  font-size: 1.25rem;
+  color: #475569;
+  margin-bottom: 48px;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.modal-image-wrapper {
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.1);
+}
+
+/* Services Modal Specific Styles */
+.modal-service-image-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  background: #f8fafc;
+  padding: 48px;
+  border-radius: 24px;
+}
+
+.modal-service-icon {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .modal-info-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .modal-header, .modal-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .advantages-section {
@@ -2707,7 +2968,7 @@ body {
   }
   
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive on tablet */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
     gap: 24px;
     max-width: 100%;
   }
@@ -6167,7 +6428,7 @@ body {
   left: 50%;
   top: 10px;
   transform: translateX(-50%);
-  background: #16a34a;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -6181,7 +6442,8 @@ body {
 }
 
 .back-button:hover {
-  background: green;
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  color: #ffffff;
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
@@ -6604,24 +6866,24 @@ body {
 .services-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #111827;
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
 
 .services-header p {
   font-size: 1.2rem;
-  color: #9ca3af;
+  color: #4b5563;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .service-pillar {
@@ -6665,7 +6927,7 @@ body {
 .service-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #111827;
   margin-bottom: 20px;
 }
 

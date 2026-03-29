@@ -1,15 +1,117 @@
 'use client'
 
+import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 const Advantages = () => {
   const router = useRouter()
+  const [selectedAdvantageId, setSelectedAdvantageId] = useState(null)
+  const modalContentRef = useRef(null)
 
-  const handleHighlightClick = (word) => {
-    // Navigate to details page with hash for direct jump
-    const wordId = word.toLowerCase().replace(/\s+/g, '-')
-    router.push(`/advantages-details#${wordId}`)
+  const advantagesData = [
+    {
+      id: 'construction-smart',
+      key: 'Construction Smart',
+      title: 'Construct Smart',
+      subtitle: 'End-to-End Construction Intelligence',
+      description: "We don't just deliver drawings — we deliver integrated project intelligence. From 3D BIM (LOD 100–500) to 4D planning, 6D asset management, and AI-powered automation, Gigfactory provides a unified ecosystem that connects:",
+      points: [
+        'Architecture',
+        'Structure',
+        'MEPF',
+        'Planning',
+        'BOQ & Quantity Take-Off',
+        'Documentation',
+        'Operations & Maintenance'
+      ],
+      footer: 'This ensures seamless coordination from concept to facility lifecycle.',
+      images: ['/assets/1.png', '/assets/2.png', '/assets/design development.png']
+    },
+    {
+      id: 'intelligence',
+      key: 'Intelligence',
+      title: 'Intelligence',
+      subtitle: 'Data-Driven Insights',
+      description: 'Our AI-powered intelligence system provides deep insights into construction processes, enabling data-driven decision making and predictive analytics for optimal project outcomes.',
+      points: [
+        'Real-time data analysis and reporting',
+        'Predictive modeling for risk assessment',
+        'Automated workflow optimization',
+        'Machine learning for continuous improvement',
+        'Advanced analytics dashboard'
+      ],
+      footer: 'Empowering your projects with intelligent foresight.',
+      images: ['/assets/initiation.png', '/assets/execution.png']
+    },
+    {
+      id: 'reduce-rework',
+      key: 'Reduce Rework',
+      title: 'Reduce Rework',
+      subtitle: 'Proactive Error Prevention',
+      description: 'Advanced quality control and error prevention systems that significantly reduce rework through proactive detection and correction of issues.',
+      points: [
+        'Automated clash detection',
+        'Real-time quality monitoring',
+        'Digital inspection workflows',
+        'Error prediction algorithms',
+        'Continuous quality assurance'
+      ],
+      footer: 'Minimizing errors, maximizing efficiency.',
+      images: ['/assets/Preconstruction.png', '/assets/handover.png']
+    },
+    {
+      id: 'accelerate-delivery',
+      key: 'Accelerate Delivery',
+      title: 'Accelerate Delivery',
+      subtitle: 'Streamlined Project Methodology',
+      description: 'Streamlined project delivery methodologies that leverage technology and optimized workflows to significantly reduce construction timelines.',
+      points: [
+        'Parallel processing capabilities',
+        'Automated scheduling optimization',
+        'Resource leveling algorithms',
+        'Progress tracking automation',
+        'Integrated delivery management'
+      ],
+      footer: 'Fast-tracking your vision to completion.',
+      images: ['/assets/3d.png', '/assets/4d.png']
+    },
+    {
+      id: 'optimize-cost',
+      key: 'Optimize Cost',
+      title: 'Optimize Cost',
+      subtitle: 'Value Engineering & Efficiency',
+      description: 'Comprehensive cost optimization strategies that leverage technology and data analytics to minimize expenses while maintaining quality.',
+      points: [
+        'Dynamic cost tracking and monitoring',
+        'Automated budget alerts and controls',
+        'Resource utilization optimization',
+        'Supply chain cost analysis',
+        'Value engineering recommendations'
+      ],
+      footer: 'Smart spending for superior results.',
+      images: ['/assets/boq.png', '/assets/audit.png']
+    }
+  ]
+
+  const handleHighlightClick = (key) => {
+    const advantage = advantagesData.find(a => a.key === key)
+    if (advantage) {
+      setSelectedAdvantageId(advantage.id)
+    }
   }
+
+  const closeModal = () => {
+    setSelectedAdvantageId(null)
+  }
+
+  useEffect(() => {
+    if (selectedAdvantageId) {
+      const element = document.getElementById(`modal-section-${selectedAdvantageId}`)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [selectedAdvantageId])
 
   return (
     <section className="advantages-section">
@@ -134,6 +236,46 @@ const Advantages = () => {
           </a>
         </div>
       </div>
+
+      {/* Modal Overlay */}
+      {selectedAdvantageId && (
+        <div className="advantage-modal-overlay" onClick={closeModal}>
+          <div className="advantage-modal-content" onClick={(e) => e.stopPropagation()} ref={modalContentRef}>
+            <button className="close-modal" onClick={closeModal}>&times;</button>
+            <div className="modal-scroll-container">
+              {advantagesData.map((advantage) => (
+                <div key={advantage.id} id={`modal-section-${advantage.id}`} className="modal-section">
+                  <div className="modal-header">
+                    <h2 className="modal-title">{advantage.title}</h2>
+                    <div className="modal-accent"></div>
+                  </div>
+                  <div className="modal-body">
+                    <h3 className="modal-subtitle">{advantage.subtitle}</h3>
+                    <p className="modal-description">{advantage.description}</p>
+                    <ul className="modal-points">
+                      {advantage.points.map((point, index) => (
+                        <li key={index} className="modal-point">
+                          <span className="bullet">•</span> {point}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="modal-footer-text">{advantage.footer}</p>
+                    
+                    <div className="modal-images">
+                      {advantage.images.map((img, index) => (
+                        <div key={index} className="modal-image-wrapper">
+                          <img src={img} alt={`Visual representation ${index + 1}`} className="modal-image" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="modal-section-divider"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
