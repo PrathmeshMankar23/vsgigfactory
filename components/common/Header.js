@@ -1,21 +1,26 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const navItems = [
-    { name: 'Home', href: '#', active: true },
+    { name: 'Home', href: '/', active: false },
     { name: 'Case Studies', href: '#case-studies', active: false },
-    { name: 'Our Expertise', href: '#expertise', active: false },
-    { name: 'Projects', href: '#projects', active: false },
+    { name: 'Our Expertise', href: '/expertise', active: false },
+    { name: 'Projects', href: '/projects', active: false },
     { name: 'Login', href: '#login', active: false },
   ]
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+
+  // Check if we're on the home page
+  const isHomePage = pathname === '/' || pathname === ''
 
   return (
     <header className="navbar">
@@ -56,11 +61,11 @@ const Header = () => {
 
         {/* Navigation with CSS Classes */}
         <div className="nav-test">
-          <a href="#" className="nav-test-link">Home</a>
-          <a href="#case-studies" className="nav-test-link">Case Studies</a>
-          <a href="#expertise" className="nav-test-link">Our Expertise</a>
-          <a href="#projects" className="nav-test-link">Projects</a>
-          <a href="#login" className="nav-test-link">Login</a>
+          <a href="/" className="nav-test-link">Home</a>
+          {isHomePage && <a href="#case-studies" className="nav-test-link">Case Studies</a>}
+          <a href="/expertise" className="nav-test-link">Our Expertise</a>
+          <a href="/projects" className="nav-test-link">Projects</a>
+          <button onClick={() => window.location.href = '/login'} className="nav-login-btn">Login</button>
         </div>
       </div>
 
@@ -98,7 +103,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="nav-list">
-            {navItems.map((item) => (
+            {navItems.filter(item => item.name !== 'Case Studies' || isHomePage).map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -145,7 +150,7 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="mobile-menu">
             <nav className="mobile-nav-list">
-              {navItems.map((item) => (
+              {navItems.filter(item => item.name !== 'Case Studies' || isHomePage).map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

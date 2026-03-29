@@ -128,9 +128,9 @@ const Lifecycle = () => {
 
         {/* CTA Button */}
         <div key="lifecycle-cta" className="lifecycle-cta">
-          <button className="lifecycle-button">
+          <a href="/contact" className="lifecycle-button">
             <span>Got a challenge or idea? Let's talk →</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

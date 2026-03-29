@@ -79,9 +79,9 @@ const Services = () => {
 
         {/* CTA Button */}
         <div className="services-cta">
-          <button className="services-cta-button">
+          <a href="/contact" className="services-cta-button">
             <span>Have a project in mind? Let's talk →</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

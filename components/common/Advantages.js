@@ -129,9 +129,9 @@ const Advantages = () => {
 
         {/* CTA Button */}
         <div className="advantages-cta">
-          <button className="advantages-button">
+          <a href="/contact" className="advantages-button">
             <span>Looking for smart construction solutions? Let's talk →</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

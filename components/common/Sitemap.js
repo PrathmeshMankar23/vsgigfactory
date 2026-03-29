@@ -34,6 +34,16 @@ const Sitemap = () => {
       ]
     },
     {
+      title: "Services",
+      links: [
+        { name: "Our Expertise", url: "/expertise" },
+        { name: "Current Projects", url: "#current" },
+        { name: "Completed Projects", url: "#completed" },
+        { name: "Upcoming Projects", url: "#upcoming" },
+        { name: "Project Portfolio", url: "#portfolio" }
+      ]
+    },
+    {
       title: "Projects",
       links: [
         { name: "Current Projects", url: "#current" },
@@ -45,6 +55,7 @@ const Sitemap = () => {
     {
       title: "About",
       links: [
+        { name: "About Us", url: "/about" },
         { name: "Our Story", url: "/about/story" },
         { name: "Our Team", url: "/about/team" },
         { name: "Company Overview", url: "/about/overview" },

@@ -90,9 +90,9 @@ const CaseStudies = () => {
 
         <div className="case-studies-cta">
           <p>Ready to move your project forward?</p>
-          <button className="case-studies-button">
+          <a href="/contact" className="case-studies-button">
             <span>Let's Connect →</span>            
-          </button>
+          </a>
         </div>
       </div>
     </section>

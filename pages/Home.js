@@ -7,6 +7,7 @@ import Lifecycle from '../components/common/Lifecycle'
 import Advantages from '../components/common/Advantages'
 import Trust from '../components/common/Videos'
 import CaseStudies from '../components/common/CaseStudies'
+import Contact from '../components/common/Contact'
 import Sitemap from '../components/common/Sitemap'
 
 const Home = () => {
@@ -34,9 +35,11 @@ const Home = () => {
       {/* Case Studies Section */}
       <CaseStudies />
 
+      {/* Contact Section */}
+      <Contact />
+
       {/* Sitemap Section */}
       <Sitemap />
-
       
     </main>
   )

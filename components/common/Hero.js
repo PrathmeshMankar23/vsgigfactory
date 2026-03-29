@@ -54,9 +54,9 @@ const Hero = () => {
               Technology-enabled platform for integrated BIM planning, designing & engineering. 
               Project reference across 10+ Million Sqft.
             </p>
-            <button className="hero-button">
+            <a href="/contact" className="hero-button">
               <span>Let's Connect →</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
