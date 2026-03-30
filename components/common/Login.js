@@ -31,7 +31,16 @@ const Login = () => {
         {/* LEFT SIDE */}
         <div className="login-left">
           <p className="what-is-text" style={{ color: 'white' }}>what is</p>
-          <h1>CORE</h1>
+          <h1>
+            <a 
+              href="https://app.gigbimlabs.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="core-link"
+            >
+              CORE
+            </a>
+          </h1>
           <p>Gigfactory's Execution Control Platform</p>
         </div>
 

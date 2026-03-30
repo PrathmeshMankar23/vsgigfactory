@@ -25,7 +25,7 @@ const Advantages = ({ onContactClick }) => {
         'Operations & Maintenance'
       ],
       footer: 'This ensures seamless coordination from concept to facility lifecycle.',
-      images: ['/assets/A_architecture.png', '/assets/A_strucutre.png', '/assets/A_MEPF.png', '/assets/A_planning.png', '/assets/A_BOQ.png', '/assets/A_operations and maintenance.png']
+      images: ['/assets/A_architecture.png', '/assets/A_structure.png', '/assets/A_MEPF.png', '/assets/A_planning.png', '/assets/A_BOQ.png', '/assets/A_operations and maintenance.png']
     },
     {
       id: 'intelligence',

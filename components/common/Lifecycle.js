@@ -1,11 +1,32 @@
 'use client'
 
-import { useState } from 'react'
-import { Fragment } from 'react'
+import { useState, useRef, Fragment, useEffect } from 'react'
 
 const Lifecycle = ({ onContactClick }) => {
   const [activeStage, setActiveStage] = useState(null)
   const [hoveredStage, setHoveredStage] = useState(null)
+  const lifecycleRef = useRef(null)
+
+  // Handle click outside to close description
+  useEffect(() => {
+    const handleClickAnywhere = (event) => {
+      // Check if click is on a stage circle
+      const stageCircle = event.target.closest('.stage-circle')
+      
+      if (stageCircle) {
+        // If clicking on a circle, let the circle's click handler handle it
+        return
+      } else if (lifecycleRef.current && lifecycleRef.current.contains(event.target)) {
+        // If clicking anywhere else in the lifecycle section, close description
+        setActiveStage(null)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickAnywhere)
+    return () => {
+      document.removeEventListener('mousedown', handleClickAnywhere)
+    }
+  }, [])
 
   const stages = [
     {
@@ -65,7 +86,7 @@ const Lifecycle = ({ onContactClick }) => {
   }
 
   return (
-    <section className="lifecycle-section">
+    <section className="lifecycle-section" ref={lifecycleRef}>
       <div className="container">
         <div className="lifecycle-header">
           <h2 className="lifecycle-title">End-to-End Construction Lifecycle Framework</h2>
@@ -126,8 +147,8 @@ const Lifecycle = ({ onContactClick }) => {
         </Fragment>
         </div>
 
-        {/* CTA Button */}
-        <div key="lifecycle-cta" className="lifecycle-cta">
+        {/* CTA Button - Dynamic positioning */}
+        <div key="lifecycle-cta" className={`lifecycle-cta ${activeStage ? 'cta-shifted' : ''}`}>
           <button onClick={onContactClick} className="lifecycle-button">
             <span>Got a challenge or idea? Let's talk →</span>
           </button>
