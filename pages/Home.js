@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
 import Hero from '../components/common/Hero'
@@ -7,39 +10,48 @@ import Lifecycle from '../components/common/Lifecycle'
 import Advantages from '../components/common/Advantages'
 import Trust from '../components/common/Videos'
 import CaseStudies from '../components/common/CaseStudies'
-import Contact from '../components/common/Contact'
 import Sitemap from '../components/common/Sitemap'
+import ContactModal from '../components/common/ContactModal'
 
 const Home = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true)
+  }
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false)
+  }
   
   return (
     <main>
       {/* Hero Section */}
-      <Hero />
+      <Hero onContactClick={openContactModal} />
 
       {/* Logo Section */}
       <LogoSection />
 
       {/* Services Section */}
-      <Services />
+      <Services onContactClick={openContactModal} />
 
       {/* Lifecycle Section */}
-      <Lifecycle />
+      <Lifecycle onContactClick={openContactModal} />
 
       {/* Advantages Section */}
-      <Advantages />
+      <Advantages onContactClick={openContactModal} />
 
       {/* Trust Section */}
       <Trust />
 
       {/* Case Studies Section */}
-      <CaseStudies />
-
-      {/* Contact Section */}
-      <Contact />
+      <CaseStudies onContactClick={openContactModal} />
 
       {/* Sitemap Section */}
       <Sitemap />
+
+      {/* Contact Modal */}
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
       
     </main>
   )

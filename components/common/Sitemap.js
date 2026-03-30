@@ -1,7 +1,18 @@
 'use client'
 
 const Sitemap = () => {
-  const sitemapSections = [
+  const leftSections = [
+    {
+      title: "Quick Links",
+      links: [
+        { name: "About Us", url: "/about" },
+        { name: "Projects", url: "/projects" },
+        { name: "Case Studies", url: "/case-studies" }
+      ]
+    }
+  ]
+
+  const middleLeftSections = [
     {
       title: "Services",
       links: [
@@ -12,67 +23,30 @@ const Sitemap = () => {
         { name: "BOQ Services", url: "/services-details#boq" },
         { name: "Audit Services", url: "/services-details#audit" }
       ]
-    },
-    {
-      title: "Case Studies",
-      links: [
-        { name: "Recent Projects", url: "#case-studies" },
-        { name: "Success Stories", url: "#success-stories" },
-        { name: "Project Gallery", url: "#project-gallery" },
-        { name: "Client Testimonials", url: "#testimonials" }
-      ]
-    },
+    }
+  ]
+
+  const middleRightSections = [
     {
       title: "Our Expertise",
       links: [
-        { name: "Construction Management", url: "#expertise" },
-        { name: "Project Planning", url: "#planning" },
-        { name: "BIM Integration", url: "#bim" },
-        { name: "Quality Assurance", url: "#quality" },
-        { name: "Risk Management", url: "#risk" },
-        { name: "Cost Control", url: "#cost" }
+        { name: "Construction Management", url: "/expertise" },
+        { name: "Project Planning", url: "/planning" },
+        { name: "BIM Integration", url: "/bim" },
+        { name: "Quality Assurance", url: "/quality" },
+        { name: "Risk Management", url: "/risk" },
+        { name: "Cost Control", url: "/cost" }
       ]
-    },
+    }
+  ]
+
+  const rightSections = [
     {
-      title: "Services",
+      title: "Contact Us",
       links: [
-        { name: "Our Expertise", url: "/expertise" },
-        { name: "Current Projects", url: "#current" },
-        { name: "Completed Projects", url: "#completed" },
-        { name: "Upcoming Projects", url: "#upcoming" },
-        { name: "Project Portfolio", url: "#portfolio" }
-      ]
-    },
-    {
-      title: "Projects",
-      links: [
-        { name: "Current Projects", url: "#current" },
-        { name: "Completed Projects", url: "#completed" },
-        { name: "Upcoming Projects", url: "#upcoming" },
-        { name: "Project Portfolio", url: "#portfolio" }
-      ]
-    },
-    {
-      title: "About",
-      links: [
-        { name: "About Us", url: "/about" },
-        { name: "Our Story", url: "/about/story" },
-        { name: "Our Team", url: "/about/team" },
-        { name: "Company Overview", url: "/about/overview" },
-        { name: "Mission & Vision", url: "/about/mission" },
-        { name: "Core Values", url: "/about/values" },
-        { name: "Careers", url: "/careers" },
-        { name: "Partners", url: "/partners" }
-      ]
-    },
-    {
-      title: "Contact",
-      links: [
-        { name: "Get in Touch", url: "/contact" },
-        { name: "+1-234-567-8900", url: "tel:+12345678900" },
+        { name: "Get In Touch", url: "/contact" },
         { name: "Email Us", url: "mailto:info@gigfactory.com" },
-        { name: "LinkedIn", url: "https://linkedin.com/company/gigfactory" },
-        { name: "Office Location", url: "/location" }
+        { name: "Call Us", url: "tel:+1234567890" }
       ]
     }
   ]
@@ -114,23 +88,89 @@ const Sitemap = () => {
 
         {/* Sitemap Links */}
         <div className="sitemap-content">
-          {sitemapSections.map((section, index) => (
-            <div key={index} className="sitemap-section-block">
-              <h3 className="section-title">{section.title}</h3>
-              <div className="section-links">
-                {section.links.map((link, linkIndex) => (
-                  <a
-                    key={linkIndex}
-                    href={link.url}
-                    className="sitemap-link"
-                    target={link.url.startsWith('http') ? '_blank' : '_self'}
-                  >
-                    {link.name}
-                  </a>
-                ))}
+          {/* Left Side */}
+          <div className="sitemap-left">
+            {leftSections.map((section, index) => (
+              <div key={index} className="sitemap-section">
+                <h3 className="section-title">{section.title}</h3>
+                <div className="section-links">
+                  {section.links.map((link, linkIndex) => (
+                    <a
+                      key={linkIndex}
+                      href={link.url}
+                      className="sitemap-link"
+                      target={link.url.startsWith('http') || link.url.startsWith('mailto') || link.url.startsWith('tel') ? '_blank' : '_self'}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Middle Left Side */}
+          <div className="sitemap-middle-left">
+            {middleLeftSections.map((section, index) => (
+              <div key={index} className="sitemap-section">
+                <h3 className="section-title">{section.title}</h3>
+                <div className="section-links">
+                  {section.links.map((link, linkIndex) => (
+                    <a
+                      key={linkIndex}
+                      href={link.url}
+                      className="sitemap-link"
+                      target={link.url.startsWith('http') || link.url.startsWith('mailto') || link.url.startsWith('tel') ? '_blank' : '_self'}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Middle Right Side */}
+          <div className="sitemap-middle-right">
+            {middleRightSections.map((section, index) => (
+              <div key={index} className="sitemap-section">
+                <h3 className="section-title">{section.title}</h3>
+                <div className="section-links">
+                  {section.links.map((link, linkIndex) => (
+                    <a
+                      key={linkIndex}
+                      href={link.url}
+                      className="sitemap-link"
+                      target={link.url.startsWith('http') || link.url.startsWith('mailto') || link.url.startsWith('tel') ? '_blank' : '_self'}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Side */}
+          <div className="sitemap-right">
+            {rightSections.map((section, index) => (
+              <div key={index} className="sitemap-section">
+                <h3 className="section-title">{section.title}</h3>
+                <div className="section-links">
+                  {section.links.map((link, linkIndex) => (
+                    <a
+                      key={linkIndex}
+                      href={link.url}
+                      className="sitemap-link"
+                      target={link.url.startsWith('http') || link.url.startsWith('mailto') || link.url.startsWith('tel') ? '_blank' : '_self'}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footer */}

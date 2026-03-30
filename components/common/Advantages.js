@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
-const Advantages = () => {
+const Advantages = ({ onContactClick }) => {
   const router = useRouter()
   const [selectedAdvantageId, setSelectedAdvantageId] = useState(null)
   const modalContentRef = useRef(null)
@@ -25,7 +25,7 @@ const Advantages = () => {
         'Operations & Maintenance'
       ],
       footer: 'This ensures seamless coordination from concept to facility lifecycle.',
-      images: ['/assets/1.png', '/assets/2.png', '/assets/design development.png']
+      images: ['/assets/A_architecture.png', '/assets/A_strucutre.png', '/assets/A_MEPF.png', '/assets/A_planning.png', '/assets/A_BOQ.png', '/assets/A_operations and maintenance.png']
     },
     {
       id: 'intelligence',
@@ -41,7 +41,6 @@ const Advantages = () => {
         'Advanced analytics dashboard'
       ],
       footer: 'Empowering your projects with intelligent foresight.',
-      images: ['/assets/initiation.png', '/assets/execution.png']
     },
     {
       id: 'reduce-rework',
@@ -57,7 +56,6 @@ const Advantages = () => {
         'Continuous quality assurance'
       ],
       footer: 'Minimizing errors, maximizing efficiency.',
-      images: ['/assets/Preconstruction.png', '/assets/handover.png']
     },
     {
       id: 'accelerate-delivery',
@@ -73,7 +71,6 @@ const Advantages = () => {
         'Integrated delivery management'
       ],
       footer: 'Fast-tracking your vision to completion.',
-      images: ['/assets/3d.png', '/assets/4d.png']
     },
     {
       id: 'optimize-cost',
@@ -89,7 +86,6 @@ const Advantages = () => {
         'Value engineering recommendations'
       ],
       footer: 'Smart spending for superior results.',
-      images: ['/assets/boq.png', '/assets/audit.png']
     }
   ]
 
@@ -231,9 +227,9 @@ const Advantages = () => {
 
         {/* CTA Button */}
         <div className="advantages-cta">
-          <a href="/contact" className="advantages-button">
+          <button onClick={onContactClick} className="advantages-button">
             <span>Looking for smart construction solutions? Let's talk →</span>
-          </a>
+          </button>
         </div>
       </div>
 
@@ -255,12 +251,14 @@ const Advantages = () => {
                     <ul className="modal-points">
                       {advantage.points.map((point, index) => (
                         <li key={index} className="modal-point">
-                          <span className="bullet">•</span> {point}
+                          <span className="bullet">•</span>
+                          <span className="point-text">{point}</span>
                         </li>
                       ))}
                     </ul>
                     <p className="modal-footer-text">{advantage.footer}</p>
                     
+                    {advantage.images && (
                     <div className="modal-images">
                       {advantage.images.map((img, index) => (
                         <div key={index} className="modal-image-wrapper">
@@ -268,6 +266,7 @@ const Advantages = () => {
                         </div>
                       ))}
                     </div>
+                    )}
                   </div>
                   <div className="modal-section-divider"></div>
                 </div>

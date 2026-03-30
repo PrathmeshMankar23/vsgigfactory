@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Fragment } from 'react'
 
-const Lifecycle = () => {
+const Lifecycle = ({ onContactClick }) => {
   const [activeStage, setActiveStage] = useState(null)
   const [hoveredStage, setHoveredStage] = useState(null)
 
@@ -18,7 +18,7 @@ const Lifecycle = () => {
     {
       id: 2,
       name: 'Pre-construction Planning',
-      image: '/assets/Preconstruction.png',
+      image: '/assets/Preconstruction1.png',
       description: 'Detailed planning and resource allocation',
       outputs: ['Project schedule', 'Resource planning', 'Budget estimation', 'Risk assessment']
     },
@@ -128,9 +128,9 @@ const Lifecycle = () => {
 
         {/* CTA Button */}
         <div key="lifecycle-cta" className="lifecycle-cta">
-          <a href="/contact" className="lifecycle-button">
+          <button onClick={onContactClick} className="lifecycle-button">
             <span>Got a challenge or idea? Let's talk →</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>

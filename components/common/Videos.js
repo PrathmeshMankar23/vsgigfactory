@@ -8,27 +8,27 @@ const Trust = () => {
   const videos = [
     {
       id: 1,
+      name: "Gigfactory Company Video",
+      videoId: "cU8iEKLeqvc?si=8pqIXKYRktopX4q8"
+    },
+    {
+      id: 2,
       name: "Puneet Arora - AMS Project Consultants",
       videoId: "dQw4w9WgXcQ"
     },
     {
-      id: 2,
+      id: 3,
       name: "Harshad Rajadhyax - Sandersons",
       videoId: "dQw4w9WgXcQ"
     },
     {
-      id: 3,
-      name: "Yayati Kene | Real Estate",
-      videoId: "dQw4w9WgXcQ"
-    },
-    {
       id: 4,
-      name: "Ashish | Construction Expert",
+      name: "Yayati Kene | Real Estate",
       videoId: "dQw4w9WgXcQ"
     },
     {
       id: 5,
-      name: "Yayati Kene | Real Estate",
+      name: "Ashish | Construction Expert",
       videoId: "dQw4w9WgXcQ"
     }
   ]
@@ -86,7 +86,7 @@ const Trust = () => {
               &times;
             </span>
             <iframe
-              src={`https://www.youtube.com/embed/${activeModal}?autoplay=1`}
+              src={`https://youtu.be/duSdzRMFY8I?si=ehwAtC5066tRMFSv${activeModal}?autoplay=1`}
               allowFullScreen
             />
           </div>

@@ -1,4 +1,4 @@
-const CaseStudies = () => {
+const CaseStudies = ({ onContactClick }) => {
   const caseStudies = [
     {
       id: 1,
@@ -90,9 +90,9 @@ const CaseStudies = () => {
 
         <div className="case-studies-cta">
           <p>Ready to move your project forward?</p>
-          <a href="/contact" className="case-studies-button">
+          <button onClick={onContactClick} className="case-studies-button">
             <span>Let's Connect →</span>            
-          </a>
+          </button>
         </div>
       </div>
     </section>

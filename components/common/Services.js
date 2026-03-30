@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
-const Services = () => {
+const Services = ({ onContactClick }) => {
   const router = useRouter()
   const [selectedServiceId, setSelectedServiceId] = useState(null)
   const modalContentRef = useRef(null)
@@ -12,7 +12,7 @@ const Services = () => {
     {
       id: '2d',
       title: '2D',
-      image: '/assets/2d.png',
+      image: '/assets/s2d.png',
       description: 'Our team delivers clear, technically accurate drawings and documentation that serve as the foundation for successful construction projects. We ensure precision and clarity in every 2D representation.',
       features: [
         'Technical accuracy and precision in all drawings',
@@ -38,7 +38,7 @@ const Services = () => {
     {
       id: '3d',
       title: '3D',
-      image: '/assets/3d.png',
+      image: '/assets/s3d.png',
       description: 'Advanced 3D modeling and visualization services that bring your construction projects to life before breaking ground. Our 3D solutions help identify potential issues and optimize design decisions.',
       features: [
         'High-resolution 3D modeling',
@@ -64,7 +64,7 @@ const Services = () => {
     {
       id: '4d',
       title: '4D',
-      image: '/assets/4d.png',
+      image: '/assets/s4d.png',
       description: '4D simulation services that integrate time as the fourth dimension, enabling you to visualize and optimize construction sequences, schedules, and project timelines.',
       features: [
         'Time-based construction simulation',
@@ -90,7 +90,7 @@ const Services = () => {
     {
       id: 'pp-c',
       title: 'PP&C',
-      image: '/assets/pp&c.png',
+      image: '/assets/spp&c.png',
       description: 'Comprehensive Project Planning and Control services that ensure your construction projects are properly planned, monitored, and controlled from conception to completion.',
       features: [
         'Strategic project planning',
@@ -116,7 +116,7 @@ const Services = () => {
     {
       id: 'boq',
       title: 'BOQ',
-      image: '/assets/boq.png',
+      image: '/assets/sboq.png',
       description: 'Accurate Bill of Quantities and Quantity Intelligence services that provide precise measurement and cost estimation for construction projects, ensuring financial transparency and procurement efficiency.',
       features: [
         'Accurate quantity takeoff',
@@ -142,7 +142,7 @@ const Services = () => {
     {
       id: 'audit',
       title: 'Audit',
-      image: '/assets/audit.png',
+      image: '/assets/saudit.png',
       description: 'Comprehensive Audit and Verification services that ensure compliance, quality, and accuracy throughout all phases of your construction project, providing assurance and peace of mind.',
       features: [
         'Quality assurance audits',
@@ -263,9 +263,9 @@ const Services = () => {
 
         {/* CTA Button */}
         <div className="services-cta">
-          <a href="/contact" className="services-cta-button">
+          <button onClick={onContactClick} className="services-cta-button">
             <span>Have a project in mind? Let's talk →</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>

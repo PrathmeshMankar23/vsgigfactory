@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const Hero = () => {
+const Hero = ({ onContactClick }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const slides = [
@@ -16,11 +16,11 @@ const Hero = () => {
     },
     {
       id: 3,
-      image: '/assets/MEPF.jpg.jpeg'
+      image: '/assets/MEPF.jpeg'
     },
     {
       id: 4,
-      image: '/assets/Screenshot 2026-03-27 125503.png'
+      image: '/assets/hero3.png'
     }
   ]
 
@@ -54,9 +54,9 @@ const Hero = () => {
               Technology-enabled platform for integrated BIM planning, designing & engineering. 
               Project reference across 10+ Million Sqft.
             </p>
-            <a href="/contact" className="hero-button">
+            <button onClick={onContactClick} className="hero-button">
               <span>Let's Connect →</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
