@@ -96,7 +96,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
     },
     {
       id: 'pp-c',
-      title: 'PP&C',
+      title: 'Project Planning & Controls',
       image: '/assets/spp&c.png',
       description: 'Comprehensive Project Planning and Control services that ensure your construction projects are properly planned, monitored, and controlled from conception to completion.',
       features: [

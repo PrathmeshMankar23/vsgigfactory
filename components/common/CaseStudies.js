@@ -1,4 +1,10 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 const CaseStudies = ({ onContactClick }) => {
+  const router = useRouter()
+  
   const caseStudies = [
     {
       id: 1,
@@ -56,6 +62,10 @@ const CaseStudies = ({ onContactClick }) => {
     }
   ]
 
+  const handleViewProject = (studyId) => {
+    router.push(`/case-studies/${studyId}`)
+  }
+
   return (
     <section id="case-studies" className="case-studies-section">
       <div className="container">
@@ -80,9 +90,9 @@ const CaseStudies = ({ onContactClick }) => {
                     <span key={index} className="feature-tag">{feature}</span>
                   ))}
                 </div>
-                <a href={study.link} className="case-study-link">
-                  View Project →
-                </a>
+                <button onClick={() => handleViewProject(study.id)} className="case-study-link">
+                  View Case Study 
+                </button>
               </div>
             </div>
           ))}
