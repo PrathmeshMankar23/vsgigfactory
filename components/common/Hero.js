@@ -16,11 +16,19 @@ const Hero = ({ onContactClick }) => {
     },
     {
       id: 3,
-      image: '/assets/MEPF.jpeg'
+      image: '/assets/3.png'
     },
     {
       id: 4,
-      image: '/assets/hero3.png'
+      image: '/assets/4.png'
+    },
+    {
+      id: 5,
+      image: '/assets/5.png'
+    },
+    {
+      id: 6,
+      image: '/assets/6.png'
     }
   ]
 

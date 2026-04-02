@@ -98,6 +98,16 @@ const CaseStudies = ({ onContactClick }) => {
           ))}
         </div>
 
+        <div className="view-more-section">
+          <button onClick={() => {
+            console.log('View More button clicked')
+            console.log('Navigating to /case-studies')
+            router.push('/case-studies')
+          }} className="view-more-button">
+            View More Case Studies →
+          </button>
+        </div>
+
         <div className="case-studies-cta">
           <p>Ready to move your project forward?</p>
           <button onClick={onContactClick} className="case-studies-button">

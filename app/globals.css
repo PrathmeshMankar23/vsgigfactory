@@ -2417,63 +2417,29 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Hero Button Specific - White Background */
-.hero-button {
-  background: #ffffff !important;
-  color: #16a34a !important;
-  border: 2px solid #16a34a !important;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 280px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.hero-button:hover {
-  background: #16a34a !important;
-  color: #ffffff !important;
-  border-color: #16a34a !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-}
-
-.hero-button span {
-  position: relative;
-  z-index: 1;
-  font-weight: 600;
-  color: #16a34a !important;
-}
-
-.hero-button:hover span {
-  color: #16a34a !important;
-}
-
-/* Apply to all CTA buttons - White Background Style */
+/* Apply to all CTA buttons - Enhanced Green Style */
 .hero-button,
 .services-cta-button,
 .case-studies-button,
 .advantages-button,
 .lifecycle-button {
   position: relative;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #ffffff;
+  border: 2px solid #000000;
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 32px;
-  border: 2px solid #16a34a;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  gap: 8px;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: #ffffff !important;
-  min-width: 280px;
-  color: #16a34a !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
 }
 
 .hero-button span,
@@ -2483,14 +2449,9 @@ body {
 .lifecycle-button span {
   position: relative;
   z-index: 1;
-  font-weight: 600;
-  font-size: 1rem;
-  background: linear-gradient(90deg, #16a34a 50%, #000000 50%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #000000;
-  paint-order: stroke fill;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .hero-button:hover,
@@ -2498,11 +2459,9 @@ body {
 .case-studies-button:hover,
 .advantages-button:hover,
 .lifecycle-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-  background: #16a34a !important;
-  border-color: #16a34a !important;
-  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(22, 163, 74, 0.4);
+  background: linear-gradient(135deg, #15803d, #16a34a);
 }
 
 .hero-button:hover span,
@@ -2510,7 +2469,7 @@ body {
 .case-studies-button:hover span,
 .advantages-button:hover span,
 .lifecycle-button:hover span {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* CTA Container Styling */
@@ -3015,32 +2974,8 @@ body {
   margin-top: 60px;
 }
 
-.advantages-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  background: #ffffff !important;
-  color: #16a34a !important;
-  border: 2px solid #16a34a !important;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
+/* Advantages CTA - Now using unified styles */
 
-.advantages-button:hover {
-  background: #16a34a !important;
-  color: #ffffff !important;
-  border-color: #16a34a !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-}
-
-/* Advantage Modal Styles */
 .advantage-modal-overlay {
   position: fixed;
   top: 0;
@@ -3338,25 +3273,6 @@ body {
     padding: 8px 12px;
     font-size: 0.75rem;
   }
-}
-
-.lifecycle-button {
-  background: transparent;
-  color: #16a34a;
-  border: 2px solid #16a34a;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.lifecycle-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px #16a34a(0, 0, 0, 0.15);
 }
 
 /* Button Styles */
@@ -4644,34 +4560,7 @@ body {
   margin-top: 60px;
 }
 
-.advantages-button {
-  background: transparent;
-  color: #16a34a;
-  padding: 18px 36px;
-  border: 2px solid #16a34a;
-  border-radius: 8px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.advantages-button:hover {
-  background: #16a34a;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(22, 163, 74, 0.3);
-}
-
-
-/*videos/trust section */
-
-.trust-section {
-  padding: 60px 20px;
-  background: #ffffff;
-  text-align: center;
-}
+/* Advantages CTA - Now using unified styles */
 
 .trust-container {
   max-width: 1400px;
@@ -5104,7 +4993,7 @@ body {
 .case-studies-button {
   background: linear-gradient(135deg, #16a34a, #22c55e);
   color: #ffffff;
-  border: none;
+  border: 2px solid #000000;
   padding: 16px 32px;
   border-radius: 50px;
   font-size: 1rem;
@@ -5144,6 +5033,41 @@ body {
   z-index: 1;
 }
 
+/* View More Button Styles */
+.view-more-section {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.view-more-button {
+  background: transparent;
+  color: #16a34a;
+  border: 2px solid #16a34a;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  pointer-events: auto;
+  z-index: 1;
+  position: relative;
+}
+
+.view-more-button:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(22, 163, 74, 0.4);
+  border-color: #16a34a;
+}
+
 /* Responsive Design for Case Studies Section */
 @media (max-width: 768px) {
   .case-studies-section {
@@ -5167,6 +5091,17 @@ body {
     width: 320px;
     height: 400px;
     flex: 0 0 auto;
+  }
+  
+  .view-more-section {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+  
+  .view-more-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 200px;
   }
 }
 
@@ -5211,6 +5146,19 @@ body {
   
   .feature-tag {
     max-width: 80px; /* Smaller tags for mobile */
+  }
+  
+  .view-more-section {
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .view-more-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    min-width: 180px;
+    width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -6864,9 +6812,11 @@ body {
   .advantages-button,
   .lifecycle-button,
   .case-studies-button {
-    padding: 12px 20px;
-    font-size: 0.85rem;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 700;
     min-width: 180px;
+    color: #ffffff;
     width: 100%;
     max-width: 280px;
   }
@@ -7450,8 +7400,10 @@ body {
   .case-studies-button {
     width: 100% !important;
     max-width: 300px !important;
-    padding: 14px 24px !important;
-    font-size: 0.9rem !important;
+    padding: 16px 24px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
   }
   
   .services-cta,
@@ -9279,11 +9231,14 @@ body {
 .login-card {
   display: flex;
   width: 100%;
-  max-width: 1100px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 1400px;
+  height: 600px;
   background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  transition: transform 0.3s ease;
 }
 
 /* LEFT SIDE */
@@ -9389,13 +9344,14 @@ body {
 /* ===== SECOND CARD ===== */
 .expert-card {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   background: #fff;
-  border: 2px solid #16a34a;
-  border-radius: 14px;
-  padding: 40px 20px;
+  border: 3px solid #16a34a;
+  border-radius: 20px;
+  padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 40px auto;
 }
 
 .expert-title {
@@ -9412,17 +9368,23 @@ body {
 /* BUTTON */
 .expert-btn {
   background: #16a34a;
-  color: #000;
-  padding: 12px 26px;
-  border-radius: 10px;
+  color: #ffffff;
+  padding: 18px 40px;
+  border-radius: 12px;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: 0.3s;
+  margin: 10px;
+  display: inline-block;
+  min-width: 200px;
 }
 
 .expert-btn:hover {
-  background: green;
+  background: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
 }
 
 /* ===== RESPONSIVE ===== */

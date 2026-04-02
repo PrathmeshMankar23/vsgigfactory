@@ -44,55 +44,55 @@ const OurExpertise = () => {
     {
       title: "Architectural Design",
       description: "Advanced 3D architectural modeling and design visualization with parametric capabilities",
-      image: "/images/service1.jpg", // replace with your image
+      image: "/assets/Architectural Design.png", // replace with your image
       features: ["Parametric Design", "3D Visualization", "Design Optimization"]
     },
     {
       title: "3D Modeling",
       description: "High-precision 3D modeling services for complex architectural and engineering projects",
-      image: "/images/service2.jpg",
+      image: "/assets/3D Modelling.png",
       features: ["LOD Development", "Family Creation", "Model Coordination"]
     },
     {
       title: "4D/5D Construction Simulation",
       description: "Time and cost simulation for construction planning and project management optimization",
-      video: "/public/assets/4D_video.mp4",
+      video: "/assets/4D_video.mp4",
       features: ["Construction Sequencing", "Cost Analysis", "Resource Planning"]
     },
     {
       title: "Scan to BIM",
       description: "Convert point cloud data and laser scans into accurate BIM models for existing buildings",
-      image: "/images/service1.jpg",
+      image: "/assets/SCAN TO BIM.png",
       features: ["Point Cloud Processing", "As-Built Modeling", "Accuracy Verification"]
     },
     {
       title: "Construction Documentation",
       description: "Comprehensive construction documentation with detailed drawings and specifications from BIM models",
-      image: "/images/service2.jpg",
+      image: "/assets/Construction Documentation.png",
       features: ["Drawing Extraction", "Specification Writing", "Document Management"]
     },
     {
       title: "Constructability Review",
       description: "Thorough constructability analysis to identify potential issues and optimize building methods",
-      image: "/images/service3.jpg",
+      image: "/assets/Construction REVIEW.png",
       features: ["Buildability Assessment", "Risk Identification", "Optimization Recommendations"]
     },
     {
       title: "Clash Coordination",
       description: "Advanced clash detection and coordination to resolve conflicts between building systems",
-      image: "/images/service1.jpg",
+      image: "/assets/CLASH COORDINATION.png",
       features: ["Clash Detection", "Conflict Resolution", "System Coordination"]
     },
     {
       title: "Value Engineering",
       description: "Value engineering analysis to optimize costs while maintaining quality and functionality",
-      image: "/images/service2.jpg",
+      image: "/assets/VALUE ENGINEERING.png",
       features: ["Cost Optimization", "Alternative Solutions", "Quality Assurance"]
     },
     {
       title: "Quantity Takeoff",
       description: "Accurate quantity extraction and material takeoffs from BIM models for cost estimation",
-      image: "/images/service3.jpg",
+      image: "/assets/QUANTITY TAKEOFF.png",
       features: ["Material Quantification", "Cost Estimation", "Quantity Analysis"]
     }
   ]

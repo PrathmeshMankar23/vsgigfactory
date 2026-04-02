@@ -2,9 +2,10 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Header from '@/components/common/Header'
+import Header from '../../components/common/Header'
 
 const CaseStudiesPage = () => {
+  console.log('CaseStudiesPage component loaded')
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState('All')
   
