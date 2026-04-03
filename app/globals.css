@@ -6634,81 +6634,6 @@ body {
     padding: 5px 10px;
   }
   
-  /* Lifecycle Section Mobile */
-  .lifecycle-section {
-    padding: 40px 0;
-  }
-  
-  .lifecycle-title {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-  }
-  
-  .lifecycle-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 32px;
-  }
-  
-  .stages-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding: 0 16px;
-  }
-  
-  .stage-wrapper {
-    text-align: center;
-  }
-  
-  .stage-circle {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .stage-image {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .stage-name {
-    font-size: 0.9rem;
-    margin-top: 8px;
-  }
-  
-  .lifecycle-description {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 350px;
-    z-index: 1000;
-  }
-  
-  .description-content {
-    padding: 20px;
-  }
-  
-  .description-title {
-    font-size: 1rem;
-    margin-bottom: 12px;
-  }
-  
-  .description-text {
-    font-size: 0.85rem;
-    margin-bottom: 16px;
-  }
-  
-  .outputs-list {
-    font-size: 0.8rem;
-  }
-  
-  .output-item {
-    padding: 6px 10px;
-    margin-bottom: 6px;
-  }
-  
   /* Case Studies Section Mobile */
   .case-studies-section {
     padding: 40px 0;
@@ -7176,78 +7101,6 @@ body {
   }
   
   .logo-item-name {
-    font-size: 0.8rem !important;
-  }
-}
-
-/* Lifecycle Section Mobile */
-@media (max-width: 767px) {
-  .lifecycle-section {
-    padding: 40px 0 !important;
-  }
-  
-  .lifecycle-title {
-    font-size: 1.8rem !important;
-    margin-bottom: 16px !important;
-  }
-  
-  .lifecycle-subtitle {
-    font-size: 0.9rem !important;
-    margin-bottom: 32px !important;
-  }
-  
-  .stages-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 40px !important;
-    padding: 0 16px !important;
-  }
-  
-  .stage-wrapper {
-    text-align: center !important;
-  }
-  
-  .stage-circle {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  
-  .stage-image {
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
-  .stage-name {
-    font-size: 0.9rem !important;
-    margin-top: 8px !important;
-  }
-  
-  .lifecycle-description {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 90% !important;
-    max-width: 350px !important;
-    z-index: 1000 !important;
-  }
-  
-  .description-content {
-    padding: 20px !important;
-  }
-  
-  .description-title {
-    font-size: 1rem !important;
-    margin-bottom: 12px !important;
-  }
-  
-  .description-text {
-    font-size: 0.85rem !important;
-    margin-bottom: 16px !important;
-  }
-  
-  .outputs-list {
     font-size: 0.8rem !important;
   }
 }
@@ -10475,5 +10328,1429 @@ body {
   .submit-btn {
     padding: 10px 20px;
     font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   LIFECYCLE SECTION MOBILE RESPONSIVE
+   Optimized for mobile viewers with large circles and images
+   ======================================== */
+
+/* Mobile Lifecycle Section */
+@media (max-width: 768px) {
+  .lifecycle-section {
+    padding: 60px 0;
+  }
+  
+  .lifecycle-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .lifecycle-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  /* Large circles for mobile */
+  .stages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  
+  .stage-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Big circles for mobile viewers */
+  .stage-circle {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+  }
+  
+  /* Large images inside circles */
+  .stage-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .stage-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #1f2937;
+  }
+  
+  /* Responsive description boxes */
+  .lifecycle-description {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 0;
+  }
+  
+  .description-content {
+    padding: 30px 25px;
+  }
+  
+  .description-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 16px;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #64748b;
+    margin-bottom: 20px;
+  }
+  
+  .outputs-list {
+    font-size: 0.9rem;
+  }
+  
+  .output-item {
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 8px;
+  }
+}
+
+/* Small Mobile Optimization */
+@media (max-width: 480px) {
+  .lifecycle-section {
+    padding: 40px 0;
+  }
+  
+  .lifecycle-title {
+    font-size: 1.8rem;
+  }
+  
+  .lifecycle-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Still large but optimized for small screens */
+  .stage-circle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .stage-image {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .stage-name {
+    font-size: 1rem;
+  }
+  
+  /* Responsive description for small mobile */
+  .lifecycle-description {
+    width: 90%;
+    max-width: 320px;
+  }
+  
+  .description-content {
+    padding: 20px 15px;
+  }
+  
+  .description-title {
+    font-size: 1.1rem;
+  }
+  
+  .description-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .stage-circle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .stage-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .lifecycle-description {
+    width: 85%;
+    max-width: 280px;
+  }
+}
+
+/* ========================================
+   COMPREHENSIVE WEBSITE MOBILE RESPONSIVE
+   Makes entire website responsive and look good
+   ======================================== */
+
+/* Base Mobile Styles */
+@media (max-width: 768px) {
+  /* Container and Layout */
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 70vh;
+    padding: 80px 0 60px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-button {
+    padding: 16px 32px;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  
+  /* Services Section */
+  .services-section {
+    padding: 60px 0;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .services-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .service-card {
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .service-icon-image {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Advantages Section */
+  .advantages-section {
+    padding: 60px 20px;
+  }
+  
+  .advantages-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .advantages-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .tags-container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .word-cloud {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .tag {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin: 4px;
+  }
+  
+  .tag.small {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .tag.large {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  /* Case Studies Section */
+  .case-studies-section {
+    padding: 60px 0;
+  }
+  
+  .case-studies-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .case-studies-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+  
+  .case-study-card {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .case-study-image {
+    height: 200px;
+  }
+  
+  .case-study-content {
+    padding: 25px 20px;
+  }
+  
+  .case-study-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .case-study-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .view-more-button {
+    padding: 16px 32px;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  
+  .case-studies-cta {
+    margin-top: 50px;
+  }
+  
+  .case-studies-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  
+  /* Trust/Videos Section */
+  .trust-section {
+    padding: 60px 20px;
+  }
+  
+  .trust-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .trust-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .trust-video {
+    height: 250px;
+    border-radius: 15px;
+  }
+  
+  /* Logo Section */
+  .logo-section {
+    padding: 60px 0;
+  }
+  
+  .logo-section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .logo-item {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  
+  .logo-item img {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-item-name {
+    font-size: 0.8rem;
+  }
+  
+  /* Footer */
+  .sitemap-footer {
+    padding: 30px 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem;
+  }
+  
+  /* CTA Buttons */
+  .cta-button,
+  .services-cta-button,
+  .advantages-button,
+  .lifecycle-button,
+  .case-studies-button {
+    padding: 16px 32px;
+    font-size: 1rem;
+    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    height: 70px;
+  }
+  
+  .navbar-content {
+    padding: 0 20px;
+    height: 70px;
+  }
+  
+  .logo-main-text {
+    font-size: 1.6rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.5rem;
+  }
+  
+  .flag {
+    width: 16px;
+    height: 12px;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .mobile-menu-btn svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Section Spacing */
+  section {
+    margin-bottom: 40px;
+  }
+}
+
+/* Small Mobile Optimization */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 60vh;
+    padding: 60px 0 40px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Services */
+  .services-section {
+    padding: 40px 0;
+  }
+  
+  .services-title {
+    font-size: 1.8rem;
+  }
+  
+  .services-grid {
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 25px 20px;
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .service-icon-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Case Studies */
+  .case-studies-section {
+    padding: 40px 0;
+  }
+  
+  .case-studies-title {
+    font-size: 1.8rem;
+  }
+  
+  .case-studies-grid {
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .case-study-card {
+    min-height: 350px;
+  }
+  
+  .case-study-image {
+    height: 180px;
+  }
+  
+  .case-study-content {
+    padding: 20px 15px;
+  }
+  
+  /* Logo Grid */
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .logo-item {
+    padding: 15px 10px;
+  }
+  
+  .logo-item img {
+    height: 30px;
+  }
+  
+  /* Trust Videos */
+  .trust-video {
+    height: 200px;
+  }
+  
+  /* Buttons */
+  .hero-button,
+  .view-more-button,
+  .cta-button,
+  .services-cta-button,
+  .advantages-button,
+  .lifecycle-button,
+  .case-studies-button {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .services-title,
+  .advantages-title,
+  .case-studies-title {
+    font-size: 1.6rem;
+  }
+  
+  .logo-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .service-card {
+    padding: 20px 15px;
+  }
+  
+  .case-study-card {
+    min-height: 320px;
+  }
+  
+  .trust-video {
+    height: 180px;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .trust-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Landscape Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 50vh;
+    padding: 40px 0 30px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .services-section,
+  .case-studies-section,
+  .advantages-section {
+    padding: 40px 0;
+  }
+}
+
+/* ========================================
+   MOBILE-FIRST RESPONSIVE OVERRIDE
+   Complete mobile responsiveness for all sections
+   ======================================== */
+
+/* Mobile First - Base Styles for All Mobile Devices */
+@media (max-width: 768px) {
+  
+  /* ========================================
+     GLOBAL MOBILE STYLES
+     ======================================== */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* ========================================
+     NAVIGATION MOBILE
+     ======================================== */
+  
+  .navbar {
+    height: 70px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  }
+  
+  .navbar-content {
+    padding: 0 20px !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  
+  .logo-container {
+    flex: 1 !important;
+  }
+  
+  .logo-main-text {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+  }
+  
+  .logo-tagline {
+    font-size: 0.4rem !important;
+    letter-spacing: 1px !important;
+  }
+  
+  .nav-test, .nav-list {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+    position: relative !important;
+    width: 45px !important;
+    height: 45px !important;
+    padding: 10px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+  }
+  
+  .mobile-menu-btn svg {
+    width: 25px !important;
+    height: 25px !important;
+    fill: #1f2937 !important;
+  }
+  
+  /* ========================================
+     HERO SECTION MOBILE
+     ======================================== */
+  
+  .hero {
+    min-height: 70vh !important;
+    padding: 100px 0 60px !important;
+    text-align: center !important;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .hero-button {
+    display: inline-block !important;
+    padding: 16px 32px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    min-width: 200px !important;
+  }
+  
+  /* ========================================
+     SERVICES SECTION MOBILE
+     ======================================== */
+  
+  .services-section {
+    padding: 60px 0 !important;
+  }
+  
+  .services-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .services-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .services-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+    padding: 0 20px !important;
+  }
+  
+  .service-card {
+    padding: 30px 25px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .service-icon {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 20px !important;
+  }
+  
+  .service-icon-image {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  .service-title {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .service-description {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* ========================================
+     ADVANTAGES SECTION MOBILE
+     ======================================== */
+  
+  .advantages-section {
+    padding: 60px 20px !important;
+  }
+  
+  .advantages-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .advantages-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .tags-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  .word-cloud {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 400px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 20px !important;
+  }
+  
+  .tag {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    border-radius: 25px !important;
+    margin: 4px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .tag.small {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+  }
+  
+  .tag.large {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+  
+  /* ========================================
+     LIFECYCLE SECTION MOBILE
+     ======================================== */
+  
+  .lifecycle-section {
+    padding: 60px 0 !important;
+  }
+  
+  .lifecycle-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .lifecycle-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .stages-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 50px !important;
+    padding: 0 20px !important;
+  }
+  
+  .stage-wrapper {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .stage-circle {
+    width: 480px !important;
+    height: 480px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 3px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .stage-image {
+    width: 405px !important;
+    height: 405px !important;
+    object-fit: contain !important;
+  }
+  
+  .stage-name {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* ========================================
+     CASE STUDIES SECTION MOBILE
+     ======================================== */
+  
+  .case-studies-section {
+    padding: 60px 0 !important;
+  }
+  
+  .case-studies-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .case-studies-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .case-studies-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 25px !important;
+    padding: 0 20px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .case-study-card {
+    flex: 0 0 auto !important;
+    min-width: 300px !important;
+    max-width: 350px !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    height: auto !important;
+    min-height: 400px !important;
+    scroll-snap-align: start !important;
+  }
+  
+  .case-study-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+  
+  .case-study-content {
+    padding: 25px 20px !important;
+  }
+  
+  .case-study-title {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .case-study-description {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .view-more-button {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+  }
+  
+  .case-studies-cta {
+    text-align: center !important;
+    margin-top: 50px !important;
+    padding: 0 20px !important;
+  }
+  
+  .case-studies-cta p {
+    font-size: 1.1rem !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .case-studies-button {
+    display: inline-block !important;
+    padding: 16px 32px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border: 2px solid #000000 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    min-width: 200px !important;
+  }
+  
+  /* ========================================
+     TRUST/VIDEOS SECTION MOBILE
+     ======================================== */
+  
+  .trust-section {
+    padding: 60px 20px !important;
+  }
+  
+  .trust-heading {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .trust-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+  
+  .trust-video {
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* ========================================
+     LOGO SECTION MOBILE
+     ======================================== */
+  
+  .logo-section {
+    padding: 60px 0 !important;
+  }
+  
+  .logo-section-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .logo-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 20px !important;
+  }
+  
+  .logo-item {
+    padding: 20px 15px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .logo-item img {
+    height: 35px !important;
+    margin-bottom: 10px !important;
+    object-fit: contain !important;
+  }
+  
+  .logo-item-name {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+  }
+  
+  /* ========================================
+     FOOTER MOBILE
+     ======================================== */
+  
+  .sitemap-footer {
+    padding: 30px 20px !important;
+  }
+  
+  .footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+  }
+  
+  /* ========================================
+     CTA BUTTONS MOBILE
+     ======================================== */
+  
+  .cta-button,
+  .services-cta-button,
+  .advantages-button,
+  .lifecycle-button {
+    display: inline-block !important;
+    padding: 16px 32px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    min-width: 200px !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+  
+  /* ========================================
+     TYPOGRAPHY MOBILE
+     ======================================== */
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  p {
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* ========================================
+     IMAGES MOBILE
+     ======================================== */
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+  
+  /* ========================================
+     SECTION SPACING MOBILE
+     ======================================== */
+  
+  section {
+    margin-bottom: 40px !important;
+  }
+  
+  /* ========================================
+     UTILITY MOBILE
+     ======================================== */
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 480px) {
+  
+  .container {
+    padding: 0 15px !important;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .services-title,
+  .advantages-title,
+  .lifecycle-title,
+  .case-studies-title,
+  .trust-heading,
+  .logo-section-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .services-grid,
+  .case-studies-grid {
+    gap: 20px !important;
+    padding: 0 15px !important;
+  }
+  
+  .service-card,
+  .case-study-content {
+    padding: 25px 20px !important;
+  }
+  
+  .service-icon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .service-icon-image {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .stage-circle {
+    width: 440px !important;
+    height: 440px !important;
+    margin: 0 auto 3px !important;
+  }
+  
+  .stage-image {
+    width: 365px !important;
+    height: 365px !important;
+  }
+  
+  .stage-name {
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  .logo-item {
+    padding: 15px 10px !important;
+  }
+  
+  .logo-item img {
+    height: 30px !important;
+  }
+  
+  .trust-video {
+    height: 200px !important;
+  }
+  
+  .hero-button,
+  .view-more-button,
+  .cta-button,
+  .services-cta-button,
+  .advantages-button,
+  .lifecycle-button,
+  .case-studies-button {
+    padding: 14px 28px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ========================================
+   VERY SMALL MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 360px) {
+  
+  .container {
+    padding: 0 12px !important;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .services-title,
+  .advantages-title,
+  .lifecycle-title,
+  .case-studies-title {
+    font-size: 1.6rem !important;
+  }
+  
+  .logo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .service-card {
+    padding: 20px 15px !important;
+  }
+  
+  .case-study-card {
+    min-height: 320px !important;
+  }
+  
+  .trust-video {
+    height: 180px !important;
+  }
+  
+  .stage-circle {
+    width: 280px !important;
+    height: 280px !important;
+    margin: 0 auto 3px !important;
+  }
+  
+  .stage-image {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .stage-name {
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
   }
 }
