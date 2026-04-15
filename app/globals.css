@@ -572,33 +572,17 @@ body {
 
 
 .navbar {
-
-
-
   background: transparent;
-
-
-
   box-shadow: none;
-
-
-
   border-bottom: 3px solid #16a34a;
-
-
-
   visibility: visible !important;
-
-
-
   opacity: 1 !important;
-
-
-
   height: 90px !important;
-
-
-
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
 }
 
 
@@ -6064,6 +6048,7 @@ body {
    Projects/Expertise pages: reduce gap before sitemap (mobile)
    ========================================================== */
 @media (max-width: 768px) {
+
   .projects-page,
   .expertise-page {
     min-height: auto !important;
@@ -6071,8 +6056,8 @@ body {
   }
 
   /* Pull sitemap closer to the cards */
-  .projects-page + .login-sitemap-section,
-  .expertise-page + .login-sitemap-section,
+  .projects-page+.login-sitemap-section,
+  .expertise-page+.login-sitemap-section,
   .login-sitemap-section {
     margin-top: -34px !important;
   }
@@ -6082,6 +6067,7 @@ body {
    Mobile: use phone wallpaper everywhere (override desktop)
    ========================================================== */
 @media (max-width: 768px) {
+
   .advantages-details-section,
   .case-study-details-section,
   .services-section,
@@ -6122,14 +6108,15 @@ body {
    Projects/Expertise pages: reduce gap before sitemap (desktop)
    ========================================================== */
 @media (min-width: 769px) {
+
   .projects-page,
   .expertise-page {
     padding-bottom: 40px !important;
     min-height: auto !important;
   }
 
-  .projects-page + .login-sitemap-section,
-  .expertise-page + .login-sitemap-section {
+  .projects-page+.login-sitemap-section,
+  .expertise-page+.login-sitemap-section {
     margin-top: -40px !important;
   }
 }
@@ -6147,7 +6134,8 @@ body {
    ========================================================== */
 @media (max-width: 768px) {
   .about-us-section {
-    padding-top: 90px !important; /* keep below fixed header */
+    padding-top: 90px !important;
+    /* keep below fixed header */
     min-height: auto !important;
   }
 
@@ -11855,15 +11843,8 @@ body {
 
 
 
-  width: 300px;
-
-  /* Increased width */
-
-
-
-  min-height: 220px;
-
-  /* Increased height */
+  width: 320px;
+  min-height: 280px;
 
 
 
@@ -11981,7 +11962,7 @@ body {
 
 
 
-  border-bottom: 12px solid #16a34a;
+  border-bottom: 12px solid #ffffff; /* Match box background */
 
 
 
@@ -12313,45 +12294,18 @@ body {
 
 
 .output-item {
-
-
-
   display: flex;
-
-
-
-  align-items: center;
-
-
-
-  margin-bottom: 8px;
-
-  /* Increased margin */
-
-
-
-  font-size: 0.9rem;
-
-  /* Increased from 0.7rem */
-
-
-
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
   color: #374151;
+  white-space: normal;
+  line-height: 1.5;
+  overflow: visible;
+}
 
-
-
-  white-space: nowrap;
-
-
-
-  overflow: hidden;
-
-
-
-  text-overflow: ellipsis;
-
-
-
+.output-text {
+  flex: 1; /* Take all available space and align text in a column */
 }
 
 
@@ -12377,33 +12331,13 @@ body {
 
 
 .output-bullet {
-
-
-
   color: #16a34a;
-
-
-
   font-weight: bold;
-
-
-
-  margin-right: 8px;
-
-  /* Increased margin */
-
-
-
-  font-size: 0.875rem;
-
-  /* Increased from 0.75rem */
-
-
-
+  font-size: 1rem;
   flex-shrink: 0;
-
-
-
+  width: 20px; /* Fixed width for the bullet */
+  display: inline-block;
+  line-height: inherit;
 }
 
 
@@ -19261,61 +19195,19 @@ body {
 
 
 .case-study-card {
-
-
-
   width: 380px;
-
-
-
-  height: 450px;
-
-
-
+  height: 620px; /* Increased from 520px to fit full content and button */
   flex: 0 0 auto;
-
-
-
   scroll-snap-align: start;
-
-
-
   background: #ffffff;
-
-
-
   border-radius: 20px;
-
-
-
   overflow: hidden;
-
-
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-
-
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-
-
   border: 1px solid rgba(22, 163, 74, 0.1);
-
-
-
   position: relative;
-
-
-
   display: flex;
-
-
-
   flex-direction: column;
-
-
-
 }
 
 
@@ -19413,25 +19305,12 @@ body {
 
 
 .case-study-image {
-
-
-
   position: relative;
-
-
-
   overflow: hidden;
-
-
-
-  height: 220px;
-
-
-
+  height: 220px !important; /* Force exact height even if image fails */
+  min-height: 220px !important;
   background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-
-
-
+  display: block;
 }
 
 
@@ -19589,46 +19468,17 @@ body {
 
 
 .case-study-title {
-
-
-
   font-size: 1.4rem;
-
-
-
   font-weight: 700;
-
-
-
   color: #1f2937;
-
-
-
-  margin-bottom: 16px;
-
-
-
+  margin-bottom: 12px;
   line-height: 1.3;
-
-
-
+  min-height: 52px; /* Set height for 2 lines */
+  max-height: 52px;
   display: -webkit-box;
-
-
-
   -webkit-line-clamp: 2;
-  line-clamp: 2;
-
-
-
   -webkit-box-orient: vertical;
-
-
-
   overflow: hidden;
-
-
-
 }
 
 
@@ -19638,46 +19488,16 @@ body {
 
 
 .case-study-description {
-
-
-
   font-size: 1rem;
-
-
-
   color: #64748b;
-
-
-
-  line-height: 1.6;
-
-
-
-  margin-bottom: 24px;
-
-
-
+  line-height: 1.5;
+  margin-bottom: 16px;
+  min-height: 72px; /* Set height for 3 lines */
+  max-height: 72px;
   display: -webkit-box;
-
-
-
   -webkit-line-clamp: 3;
-  line-clamp: 3;
-
-
-
   -webkit-box-orient: vertical;
-
-
-
   overflow: hidden;
-
-
-
-  flex: 1;
-
-
-
 }
 
 
@@ -19687,25 +19507,13 @@ body {
 
 
 .case-study-features {
-
-
-
   display: flex;
-
-
-
   flex-wrap: wrap;
-
-
-
-  gap: 10px;
-
-
-
-  margin-bottom: 24px;
-
-
-
+  gap: 8px;
+  margin-bottom: 15px;
+  min-height: 75px; /* Ensure 2 rows of tags always take same space */
+  max-height: 75px;
+  overflow: hidden;
 }
 
 
@@ -19787,85 +19595,25 @@ body {
 
 
 .case-study-link {
-
-
-
-  display: inline-flex;
-
-
-
+  display: flex;
   align-items: center;
-
-
-
   justify-content: center;
-
-
-
-  background: linear-gradient(145deg, #16a34a, #22c55e);
-
-
-
-  color: #ffffff;
-
-
-
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  color: #ffffff !important;
   text-decoration: none;
-
-
-
   font-weight: 700;
-
-
-
-  font-size: 0.95rem;
-
-
-
-  padding: 14px 28px;
-
-
-
-  border-radius: 50px;
-
-
-
-  border: 2px solid transparent;
-
-
-
+  font-size: 1rem;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-
-
   position: relative;
-
-
-
   overflow: hidden;
-
-
-
-  box-shadow:
-
-
-
-    0 8px 25px rgba(34, 197, 94, 0.15),
-
-
-
-    0 0 0 1px rgba(34, 197, 94, 0.1);
-
-
-
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
   cursor: pointer;
-
-
-
-  min-width: 140px;
-
-
-
+  width: 100%;
+  margin-top: 20px;
+  letter-spacing: 0.025em;
 }
 
 
@@ -31317,7 +31065,7 @@ body {
 }
 
 .section-title-2 {
-  margin-left: -10px;
+  margin-left: -30px;
   align-items: center;
   color: #16a34a;
   font-size: 1.4rem;
@@ -31331,7 +31079,7 @@ body {
 }
 
 .section-title-4 {
-  margin-left: -40px;
+  margin-left: -10px;
   align-items: center;
   color: #16a34a;
   font-size: 1.4rem;
@@ -32321,13 +32069,33 @@ body {
 }
 
 @keyframes project-image-slide {
-  0% { transform: translateX(0); }
-  28% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  61% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  94% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  28% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  61% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-200%);
+  }
+
+  94% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 
@@ -55455,7 +55223,7 @@ body {
   .lifecycle-cta,
   .lifecycle-section.is-stage-active .lifecycle-cta,
   .lifecycle-cta.cta-shifted {
-    margin-top: -42px !important;
+    margin-top: -110px !important;
     transform: none !important;
   }
 
@@ -55474,7 +55242,7 @@ body {
 
   /* Keep CTA glued to scrollbar/description */
   .lifecycle-section.is-stage-active .lifecycle-cta {
-    margin-top: -42px !important;
+    margin-top: -110px !important;
   }
 
   .lifecycle-button {
@@ -55529,6 +55297,8 @@ body {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-top: 200px !important;
+    margin-bottom: -10px;
     padding-top: 10px !important;
     clear: both !important;
   }
@@ -55536,7 +55306,7 @@ body {
   /* Reduce large gap above Case Studies (Home, mobile only) */
   .videos-section {
     min-height: auto !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 50px !important;
   }
 
   .videos-description {
@@ -55548,7 +55318,7 @@ body {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    margin: 0 auto 15px auto !important;
+    margin: 0 auto 0 auto !important;
     text-align: center !important;
     font-size: 2rem !important;
     line-height: 1.4 !important;
@@ -55558,6 +55328,11 @@ body {
     text-transform: none !important;
     clip-path: none !important;
     width: 100% !important;
+  }
+
+  .case-studies-subtitle {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   /* Fix for Dedicated Case Studies Page */
@@ -55699,6 +55474,7 @@ body {
 
 /* Keep lifecycle mobile wallpaper identical to services section */
 @media (max-width: 768px) {
+
   .services-section,
   .lifecycle-section {
     background-image:
@@ -55736,7 +55512,7 @@ body {
   background: #ffffff;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .terms-title {
@@ -55781,6 +55557,7 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .terms-container,
   .faq-container {
     background-image:
@@ -55861,7 +55638,7 @@ body {
 }
 
 .faq-item:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
@@ -55901,6 +55678,7 @@ body {
 
 /* Mobile: click-outline cards + remove section white gaps */
 @media (max-width: 768px) {
+
   /* Services + Case Studies cards: no hover effect on mobile */
   .services-grid .service-card:hover,
   .case-studies-grid .case-study-card:hover {
@@ -55967,6 +55745,7 @@ body {
 
 /* Mobile card hover visibility and heading centering fixes */
 @media (max-width: 768px) {
+
   .services-grid,
   .case-studies-grid,
   .bim-cards-grid,
@@ -56018,6 +55797,7 @@ body {
 
 /* Final mobile polish fixes */
 @media (max-width: 768px) {
+
   /* Keep a tiny visual gap before Lifecycle and Case Studies headings */
   .lifecycle-section {
     margin-top: 8px !important;
@@ -56081,6 +55861,7 @@ body {
 
 /* Final mobile corrections: visible menu icon, clean logo, section spacing */
 @media (max-width: 768px) {
+
   /* Show mobile menu button icon again */
   .mobile-menu-btn {
     right: 16px !important;
@@ -56160,7 +55941,8 @@ body {
 /* Mobile menu: remove gap under header when opened */
 @media (max-width: 768px) {
   .mobile-menu {
-    top: 85px !important; /* match mobile navbar height */
+    top: 85px !important;
+    /* match mobile navbar height */
     max-height: calc(100vh - 85px) !important;
     border-top: 0 !important;
     margin-top: 0 !important;
@@ -56207,7 +55989,7 @@ body {
 /* Cross-device smoothness guardrails (layout-safe) */
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: visible; /* Changed from hidden to satisfy position:sticky requirements */
 }
 
 img,
@@ -56222,6 +56004,7 @@ video {
 }
 
 @supports (-webkit-touch-callout: none) {
+
   html,
   body {
     text-rendering: optimizeLegibility;
@@ -56231,6 +56014,7 @@ video {
 /* iOS-only stability + responsiveness polish (no desktop changes) */
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 1024px) {
+
     html,
     body {
       -webkit-text-size-adjust: 100%;
@@ -56274,9 +56058,47 @@ video {
   }
 }
 
+/* Mobile: separate Case Studies heading from Videos section */
+@media (max-width: 768px) {
+  .case-studies-section {
+    margin-top: 210px !important;
+    padding-top: 18px !important;
+  }
+
+  .case-studies-header {
+    margin-top: 8px !important;
+    padding-top: 8px !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Mobile: tighten lifecycle stage, scrollbar, and CTA spacing */
+@media (max-width: 768px) {
+  .lifecycle-stages {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .stages-container {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .stages-container::-webkit-scrollbar {
+    height: 5px !important;
+  }
+
+  .lifecycle-cta,
+  .lifecycle-section.is-stage-active .lifecycle-cta,
+  .lifecycle-cta.cta-shifted {
+    margin-top: -110px !important;
+  }
+}
+
 /* iOS touch devices: stabilize background images across all pages/sections */
 @supports (-webkit-touch-callout: none) {
   @media (hover: none) and (pointer: coarse) {
+
     [class*="section"],
     [class*="page"] {
       background-attachment: scroll !important;
@@ -56386,6 +56208,7 @@ video {
 
 /* Mobile spacing tune: continuous lifecycle background + tighter sitemap rows */
 @media (max-width: 768px) {
+
   /* Remove visible white gap between Services CTA and Lifecycle heading */
   .services-section {
     padding-bottom: 2px !important;
@@ -56421,3 +56244,329 @@ video {
   }
 }
 
+/* Ensure Apply box background image is more visible */
+.login-page .expert-card {
+  background:
+    linear-gradient(135deg, rgba(240, 253, 244, 0.45) 0%, rgba(240, 253, 244, 0.45) 100%),
+    url('/assets/sitemap-bg.png') center/cover no-repeat !important;
+}
+
+/* Keep headings consistent across Case Studies, Expertise, and Projects on mobile */
+@media (max-width: 768px) {
+
+  .expertise-title,
+  .case-studies-page-title {
+    font-size: 1.9rem !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+  }
+}
+
+/* Make Apply card background image more visible */
+.login-page .expert-card,
+.apply-slider-container .expert-card {
+  background:
+    linear-gradient(135deg, rgba(240, 253, 244, 0.28) 0%, rgba(240, 253, 244, 0.28) 100%),
+    url('/assets/sitemap-bg.png') center/cover no-repeat !important;
+}
+
+/* Desktop heading spacing: Projects + BIM Services + Case Studies + Login below fixed header */
+@media (min-width: 769px) {
+  .our-expertise-section.projects-page,
+  .our-expertise-section.expertise-page,
+  .case-studies-page,
+  .login-page {
+    padding-top: 130px !important;
+  }
+}
+
+/* Mobile heading spacing: Projects + BIM Services below fixed header */
+@media (max-width: 768px) {
+
+  .our-expertise-section.projects-page .expertise-header-simple,
+  .our-expertise-section.expertise-page .expertise-header-simple {
+    padding-top: 100px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .our-expertise-section.projects-page .expertise-title,
+  .our-expertise-section.expertise-page .expertise-title {
+    margin-top: 0 !important;
+  }
+
+  /* Sitemap heading was too close to top on mobile */
+  .login-sitemap-section .sitemap-title-section {
+    padding-top: 12px !important;
+  }
+
+  .login-sitemap-section .sitemap-title {
+    margin-top: 6px !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+/* iOS mobile: keep About Us and Login backgrounds fixed */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 1024px) {
+
+    .about-us-section,
+    .login-page {
+      background-attachment: fixed !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+  }
+}
+
+/* Projects layout normalization: desktop 3 cards, mobile grouped slides */
+.projects-page .projects-mobile-rows {
+  display: none;
+}
+
+.projects-page .projects-desktop-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.projects-page .bim-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-page .bim-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projects-page .bim-card-content h3 {
+  min-height: 50px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 8px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projects-page .bim-card-content p {
+  min-height: 70px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 10px !important;
+  overflow: hidden;
+}
+
+.projects-page .project-scope-box {
+  min-height: 100px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.projects-page .project-scope-box .scope-value {
+  line-height: 1.35 !important;
+  overflow: hidden;
+}
+
+.projects-page .project-details {
+  margin-top: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.projects-page .project-detail-box {
+  min-height: 58px !important;
+  display: grid !important;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.projects-page .project-detail-box .detail-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.projects-page .project-detail-box .detail-value-top,
+.projects-page .project-detail-box .detail-value-bottom {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.projects-page .project-detail-box .detail-value-top {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.projects-page .project-detail-box .detail-value-bottom {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .projects-page .projects-desktop-grid {
+    display: none !important;
+  }
+
+  .projects-page .projects-mobile-rows {
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .projects-page .projects-mobile-row-block {
+    width: 100%;
+  }
+
+  .projects-page .projects-mobile-row-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    gap: 14px;
+    padding: 0 2px 8px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    scrollbar-width: thin;
+  }
+
+  .projects-page .projects-mobile-row-slider .bim-card {
+    flex: 0 0 84vw !important;
+    min-width: 84vw !important;
+    max-width: 84vw !important;
+    scroll-snap-align: start;
+    width: auto !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .bim-card-content {
+    height: 100%;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-details {
+    margin-top: auto !important;
+  }
+
+  .projects-page .projects-mobile-row-slider::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .projects-page .projects-mobile-row-slider::-webkit-scrollbar-thumb {
+    background: rgba(107, 114, 128, 0.45);
+    border-radius: 999px;
+  }
+
+  .projects-page .projects-mobile-row-slider::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 0.6);
+    border-radius: 999px;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-image-track {
+    width: 100% !important;
+    animation: none !important;
+    transform: translateX(0) !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-image-slide {
+    flex: 0 0 100% !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-image-slide:not(:first-child) {
+    display: none !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .bim-card-content h3 {
+    min-height: 72px !important;
+    max-height: 72px !important;
+    font-size: 1.05rem !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .bim-card-content p {
+    min-height: 110px !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-scope-box {
+    min-height: 150px !important;
+  }
+
+  .projects-page .projects-mobile-row-slider .project-detail-box {
+    min-height: 80px !important;
+  }
+}
+
+/* Logo strip smoothness across devices */
+.hero-logo-track {
+  animation-timing-function: linear !important;
+  animation-duration: 70s !important;
+  animation-iteration-count: infinite !important;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-logo-item,
+.hero-logo-container,
+.hero-logo-image {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-logo-track {
+    animation-duration: 56s !important;
+  }
+
+  .hero-logo-container:hover {
+    transform: none !important;
+    background: transparent !important;
+  }
+}
+
+/* About page: keep Who We Are card solid white (no wallpaper inside) */
+@media (max-width: 768px) {
+
+  .about-us-section .about-section,
+  .about-us-section .about-section .section-content,
+  .about-us-section .about-section .about-text {
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+}
+
+/* iOS mobile fixed-background effect for Login + About Us */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 1024px) {
+
+    .about-us-section,
+    .login-page {
+      position: relative !important;
+      isolation: isolate;
+      background: transparent !important;
+      background-image: none !important;
+    }
+
+    .about-us-section::before,
+    .login-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.55) 100%),
+    }
+  }
+}
+
+/* Fix visibility of the About Us page heading hidden beneath the fixed header */
+.about-us-section {
+  padding-top: 120px; /* Account for 90px header + some breathing room */
+}

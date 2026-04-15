@@ -81,7 +81,7 @@ const ServicesPageContent = () => {
     {
       id: '2d',
       title: '2D Services',
-      description: 'Comprehensive 2D drafting and documentation solutions for construction projects.',
+      description: 'Our team delivers clear, technically accurate drawings that help project stakeholders communicate design intent and execute construction efficiently.',
       detailedDescription: 'We provide precise, standards-compliant 2D drawings extracted from coordinated BIM models or developed independently. Our solutions ensure that every detail of your construction project is documented with accuracy, facilitating seamless execution on-site and clear communication among all stakeholders.',
       features: [
         'GFC (Good for Construction) Drawings',
@@ -97,7 +97,7 @@ const ServicesPageContent = () => {
         'Compliance with international drafting standards and local regulations.',
         'High-precision scaling and layering for coordinated multi-disciplinary reviews.'
       ],
-      image: '/assets/s_2d.png'
+      image: '/assets/2D.Desktop.png'
     },
     {
       id: '3d',
@@ -117,7 +117,7 @@ const ServicesPageContent = () => {
         'Enhanced stakeholder engagement through high-quality visual walkthroughs.',
         'Improved decision-making by visualizing spatial relationships and material choices early.'
       ],
-      image: '/assets/s_3d.png'
+      image: '/assets/3D.Desktop.png'
     },
     {
       id: '4d',
@@ -163,7 +163,7 @@ const ServicesPageContent = () => {
         'Cost savings through optimized resource allocation',
         'Improved stakeholder communication and reporting'
       ],
-      image: '/assets/s_planning.png'
+      image: '/assets/PP&C.Desktop.png'
     },
     {
       id: 'boq',
@@ -184,7 +184,7 @@ const ServicesPageContent = () => {
         'Transparent procurement process with detailed quantity justifications.',
         'Streamlined payment certification and variation management.'
       ],
-      image: '/assets/s_BOQ.png'
+      image: '/assets/BOQ.Desktop.png'
     },
     {
       id: 'audit',
@@ -204,7 +204,7 @@ const ServicesPageContent = () => {
         'Verification of construction quality against design specifications.',
         'Fair and accurate settlement of accounts through rigorous verification.'
       ],
-      image: '/assets/s_audit.png'
+      image: '/assets/Audit.Desktop.png'
     }
   ]
 
@@ -318,6 +318,8 @@ const ServicesPageContent = () => {
                         ))}
                       </ul>
                     </div>
+
+                    <div className="service-end-line" aria-hidden="true" />
                   </section>
                 ))}
               </div>

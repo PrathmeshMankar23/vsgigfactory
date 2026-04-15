@@ -16,7 +16,7 @@ const Hero = ({ onContactClick }) => {
     },
     {
       id: 3,
-      image: '/assets/3.png'
+      image: '/assets/3h.png'
     },
     {
       id: 4,

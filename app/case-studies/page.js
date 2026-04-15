@@ -300,48 +300,6 @@ const CaseStudiesPage = () => {
 
 
 
-                  <div className="case-study-page-meta">
-
-                    <div className="meta-item">
-
-                      <span className="meta-label">Client:</span>
-
-                      <span className="meta-value">{study.client}</span>
-
-                    </div>
-
-                    <div className="meta-item">
-
-                      <span className="meta-label">Duration:</span>
-
-                      <span className="meta-value">{study.duration}</span>
-
-                    </div>
-
-                    <div className="meta-item">
-
-                      <span className="meta-label">Location:</span>
-
-                      <span className="meta-value">{study.location}</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div className="case-study-page-features">
-
-                    {study.features.map((feature, index) => (
-
-                      <span key={index} className="feature-page-tag">{feature}</span>
-
-                    ))}
-
-                  </div>
-
-
-
                   <button
 
                     onClick={() => handleViewProject(study.id)}

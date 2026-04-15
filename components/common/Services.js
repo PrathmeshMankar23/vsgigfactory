@@ -32,7 +32,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: '2d',
       title: '2D',
       image: '/assets/s2d.png',
-      description: 'Our team delivers clear, technically accurate drawings and documentation that serve as the foundation for successful construction projects. We ensure precision and clarity in every 2D representation.',
+      description: 'Our team delivers clear, technically accurate drawings that help project stakeholders communicate design intent and execute construction efficiently.',
       features: [
         'Technical accuracy and precision in all drawings',
         'Comprehensive documentation packages',
@@ -58,7 +58,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: '3d',
       title: '3D',
       image: '/assets/s3d.png',
-      description: 'Advanced 3D modeling and visualization services that bring your construction projects to life before breaking ground. Our 3D solutions help identify potential issues and optimize design decisions.',
+      description: 'Our 3D BIM services help project teams identify issues early, streamline collaboration, and ensure accurate documentation for construction.',
       features: [
         'High-resolution 3D modeling',
         'Realistic rendering and visualization',
@@ -84,7 +84,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: '4d',
       title: '4D',
       image: '/assets/s4d.png',
-      description: '4D simulation services that integrate time as the fourth dimension, enabling you to visualize and optimize construction sequences, schedules, and project timelines.',
+      description: 'We integrate project schedules with BIM models to simulate, optimize, and control construction sequencing',
       features: [
         'Time-based construction simulation',
         'Schedule optimization and analysis',
@@ -110,7 +110,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: 'pp-c',
       title: 'Project Planning & Controls',
       image: '/assets/spp&c.png',
-      description: 'Comprehensive Project Planning and Control services that ensure your construction projects are properly planned, monitored, and controlled from conception to completion.',
+      description: 'We support structured planning to enhance coordination and execution clarity.',
       features: [
         'Strategic project planning',
         'Comprehensive scheduling',
@@ -136,7 +136,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: 'boq',
       title: 'BOQ',
       image: '/assets/sboq.png',
-      description: 'Accurate Bill of Quantities and Quantity Intelligence services that provide precise measurement and cost estimation for construction projects, ensuring financial transparency and procurement efficiency.',
+      description: 'We deliver accurate cost and quantity support to enhance financial transparency and procurement alignment.',
       features: [
         'Accurate quantity takeoff',
         'Cost estimation and analysis',
@@ -162,7 +162,7 @@ const Services = ({ onContactClick, serviceToOpen }) => {
       id: 'audit',
       title: 'Audit',
       image: '/assets/saudit.png',
-      description: 'Comprehensive Audit and Verification services that ensure compliance, quality, and accuracy throughout all phases of your construction project, providing assurance and peace of mind.',
+      description: 'We ensure compliance, transparency, and technical accuracy across project stages.',
       features: [
         'Quality assurance audits',
         'Compliance verification',
@@ -210,17 +210,17 @@ const Services = ({ onContactClick, serviceToOpen }) => {
         <div className="services-header">
           <h2 className="services-title">Services We Deliver</h2>
           <p className="services-description">
-            Our comprehensive range of services covers every aspect of construction and design, 
+            Our comprehensive range of services covers every aspect of construction and design,
             ensuring your project is handled with expertise from conception to completion.
           </p>
         </div>
-        
+
         <div className="services-grid" ref={servicesGridRef}>
           {servicesData.map((service, index) => (
             <div key={index} className="service-card" onClick={() => handleServiceClick(service)}>
               <div className="service-icon">
-                <img 
-                  src={service.image} 
+                <img
+                  src={service.image}
                   alt={service.title}
                   className="service-icon-image"
                 />
@@ -251,10 +251,10 @@ const Services = ({ onContactClick, serviceToOpen }) => {
                     </div>
                     <div className="modal-body">
                       <div className="modal-service-image-header">
-                         <img src={service.image} alt={service.title} className="modal-service-icon" />
+                        <img src={service.image} alt={service.title} className="modal-service-icon" />
                       </div>
                       <p className="modal-description">{service.description}</p>
-                      
+
                       <div className="modal-info-grid">
                         <div className="modal-info-column">
                           <h3 className="modal-subtitle">Key Features</h3>

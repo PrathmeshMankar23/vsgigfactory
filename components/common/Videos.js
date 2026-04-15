@@ -65,8 +65,7 @@ const Videos = () => {
         {/* Description */}
         <div className="videos-description" style={{ marginTop: '-30px', marginBottom: '-40px' }}>
           <p>
-            At Gigfactory, we pride ourselves on delivering exceptional BIM and construction solutions.
-            Our video testimonials showcase real projects and client experiences across various sectors.
+            At Gigfactory, our success is measured by the confidence our clients place in us. Across 10+ million sq.ft. of delivered projects, we have partnered with developers, contractors, and consultants to bring clarity, coordination, and intelligence to complex construction projects.
           </p>
           <h3>Insights & Industry Knowledge</h3>
         </div>

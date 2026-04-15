@@ -39,6 +39,7 @@
 
 
   align-items: flex-start;
+  overflow: visible;
 
 
 
@@ -67,6 +68,7 @@
 
 
   margin: 0 auto;
+  overflow: visible !important;
 
 
 
@@ -107,10 +109,7 @@
 
 
 .services-details-section {
-
-
-
-  padding: 0;
+  padding-top: 110px !important; /* Space for the 90px fixed header + 20px gap */
 
 
 
@@ -154,6 +153,7 @@
 
 
   flex-direction: column;
+  overflow: visible !important;
 
 
 
@@ -298,69 +298,24 @@
 
 
 .services-sidebar {
-
-
-
-  width: 250px;
-
-
-
+  width: clamp(220px, 20vw, 280px);
   background: #16a34a;
-
-
-
   padding: 30px 20px;
-
-
-
   display: flex;
-
-
-
   flex-direction: column;
-
-
-
   gap: 20px;
-
-
-
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
-
-
-
   flex-shrink: 0;
-
-
-
-  position: sticky;
-
-
-
-  top: 0;
-
-
-
-  align-self: flex-start;
-
-
-
-  height: max-content;
-
-
-
-  margin-left: -62px;
-
-  margin-top: -145px;
-
-  /* Removed negative margin to make it visible */
-
-
-
+  position: sticky !important;
+  top: 110px !important; /* Header height (90px) + 20px gap */
+  align-self: flex-start !important;
+  height: fit-content !important;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  margin-left: -53px;
+  margin-top: 0;
   border-radius: 0 0 20px 0;
-
-
-
+  z-index: 30;
 }
 
 
@@ -541,7 +496,7 @@
 
 
 
-  font-weight: 500;
+  font-weight: 700;
 
 
 
@@ -589,7 +544,7 @@
 
 
 
-  font-weight: 600;
+  font-weight: 700;
 
 
 
@@ -1194,28 +1149,15 @@
 
 
 .service-image-large {
-
-
-
   width: 100%;
-
-
-
   height: auto;
-  max-height: 500px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  object-fit: contain;
-  background: rgba(0, 0, 0, 0.05);
-  /* Light background to show full image if aspect ratio differs */
-
-
-
+  max-height: 800px; /* Increased to allow full infographic visibility */
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: initial;
+  background: transparent;
   max-width: 100%;
   transition: transform 0.3s ease;
-
-
-
 }
 
 
@@ -1606,7 +1548,7 @@
 
 
 
-  font-weight: 800;
+  font-weight: 600;
 
 
 
@@ -1795,9 +1737,17 @@ h3.section-subtitle::after {
 
 
   text-indent: 0 !important;
+  font-weight: 600 !important;
 
 
 
+}
+
+/* End marker line after every service block */
+.service-end-line {
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  margin-top: 28px;
 }
 
 
@@ -2452,6 +2402,15 @@ h3.section-subtitle::after {
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .services-sidebar {
+    width: 250px;
+    top: 72px;
+    max-height: calc(100vh - 95px);
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 1024px) {
 
 
@@ -2465,6 +2424,10 @@ h3.section-subtitle::after {
 
 
     padding: 15px;
+    top: 68px;
+    max-height: calc(100vh - 90px);
+    margin-left: -20px;
+    margin-top: 0;
 
 
 
@@ -2819,13 +2782,9 @@ h3.section-subtitle::after {
 
 
   .services-sidebar {
-
     width: 100% !important;
-
-    position: relative !important;
-
-    top: 0 !important;
-
+    position: sticky !important;
+    top: 100px !important;
     height: auto !important;
 
     border-radius: 15px !important;
@@ -3031,5 +2990,28 @@ h3.section-subtitle::after {
     background-attachment: fixed !important;
     background-size: cover !important;
     background-position: center !important;
+  }
+}
+
+/* Keep sidebar sticky on tablet size */
+@media (min-width: 769px) and (max-width: 991px) {
+  .services-sidebar {
+    width: 220px !important;
+    position: sticky !important;
+    top: 100px !important; /* Header height (90px) + 10px gap */
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    margin-top: 0 !important;
+    margin-left: -20px !important;
+  }
+}
+
+/* Desktop/large tablet: keep sidebar fixed in place */
+@media (min-width: 992px) {
+  .services-sidebar {
+    position: sticky !important;
+    top: 110px !important; /* Header height (90px) + 20px gap */
+    max-height: calc(100vh - 130px) !important;
+    overflow-y: auto !important;
   }
 }

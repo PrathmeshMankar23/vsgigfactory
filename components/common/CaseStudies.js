@@ -86,13 +86,8 @@ const CaseStudies = ({ onContactClick }) => {
               <div className="case-study-content">
                 <h3 className="case-study-title">{study.title}</h3>
                 <p className="case-study-description">{study.description}</p>
-                <div className="case-study-features">
-                  {study.features.map((feature, index) => (
-                    <span key={index} className="feature-tag">{feature}</span>
-                  ))}
-                </div>
                 <button onClick={() => handleViewProject(study.id)} className="case-study-link">
-                  View Case Study 
+                  View Full Case Study
                 </button>
               </div>
             </div>

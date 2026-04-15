@@ -34,35 +34,35 @@ const Lifecycle = ({ onContactClick }) => {
       name: 'Initiation',
       image: '/assets/Intiation Phase.png',
       description: 'Feasibility  &  concept  phase  planning',
-      outputs: ['Project requirements', 'Stakeholder analysis', 'Initial scope definition', 'initial stage', 'project']
+      outputs: ['Early Design Clarity', 'Initial Budget Confidence', 'Stakeholder Alignment']
     },
     {
       id: 2,
       name: 'Pre-construction Planning',
       image: '/assets/Preconstruction Phase.png',
-      description: 'Detailed planning and resource allocation',
-      outputs: ['Project schedule', 'Resource planning', 'Budget estimation', 'Risk assessment']
+      description: 'Pre-Construction',
+      outputs: ['Coordinated Multi-Discipline Model', 'Reduced Design Conflicts', 'Execution-Ready Documentation', '2D/3D']
     },
     {
       id: 3,
       name: 'Designing Development',
       image: '/assets/Design Development Phase.png',
-      description: 'Architectural and engineering design development',
-      outputs: ['Design documents', 'Engineering specifications', 'Material selection', 'Compliance checks']
+      description: 'Design Development',
+      outputs: ['Improved design clarity and visualization', 'Early identification of coordination conflicts', 'Better collaboration between consultants', 'Reduced design revisions during construction', 'Structured digital foundation for project execution']
     },
     {
       id: 4,
       name: 'Execution & Monitoring',
       image: '/assets/Execution Phase.png',
-      description: 'Construction execution and progress monitoring',
-      outputs: ['Construction progress', 'Quality control', 'Timeline tracking', 'Budget management']
+      description: 'Construction & Execution Phase',
+      outputs: ['Timeline Optimization via 4d', 'Reduced Rework via BIM', 'Proactive Issue Resolution', 'Data-Driven Execution Via Automation']
     },
     {
       id: 5,
       name: 'Handover',
       image: '/assets/Handover Phase.png',
-      description: 'Project completion and client handover',
-      outputs: ['Final inspection', 'Documentation', 'Training', 'Project closure', 'final stage']
+      description: 'Handover & Commissioning',
+      outputs: ['Digital Twin', 'Legal & Operational BIM Model', 'Structured Asset Data in uniclass', 'DataPredictive Maintenance', 'Lifecycle Cost Optimization', 'Real-Time Asset Intelligence']
     }
   ]
 
@@ -130,7 +130,7 @@ const Lifecycle = ({ onContactClick }) => {
                                   {stage.outputs.map((output, index) => (
                                     <li key={index} className="output-item">
                                       <span className="output-bullet">✓</span>
-                                      {output}
+                                      <span className="output-text">{output}</span>
                                     </li>
                                   ))}
                                 </ul>
@@ -179,7 +179,7 @@ const Lifecycle = ({ onContactClick }) => {
                                   {stage.outputs.map((output, index) => (
                                     <li key={index} className="output-item">
                                       <span className="output-bullet">✓</span>
-                                      {output}
+                                      <span className="output-text">{output}</span>
                                     </li>
                                   ))}
                                 </ul>
